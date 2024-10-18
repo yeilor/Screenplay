@@ -152,7 +152,7 @@
             <a href="requirement_type_feature.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 19-09-2024 10:51</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 17-10-2024 14:07</span>
     <br style="clear:left"/>
 </div>
 
@@ -211,9 +211,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
                             <span class="test-case-title">
-                                <span class="error-color">Compra de experiencia por puntos exitosa
+                                <span class="success-color">Compra de experiencia por puntos exitosa
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -229,74 +229,155 @@
 
     <div class="story-title">
         <h3>Scenario:</h3>
-        <div class="scenario">Dado que el usuario se encuentre en pagina web de Bienestar &quot;&lt;url&gt;&quot;<br>Cuando seleccione el tipo de documento e ingrese el numero de documento con la clave '&lt;usuario&gt;' '&lt;clave&gt;' '&lt;tipoDocumento&gt;'<br>Cuando el usuario selecciona una experiencia para comprar '&lt;nombreExperiencia&gt;' '&lt;cantidad&gt;'<br>Y realiza el proceso completo de la compra<br>Entonces el usuario visualizara un mensaje de felicitaciones por la compra</div>
+        <div class="scenario">Dado que el usuario se encuentra en pagina web de Bienestar &quot;&lt;url&gt;&quot;<br>Cuando seleccione el tipo de documento e ingrese el numero de documento con la clave '&lt;usuario&gt;' '&lt;clave&gt;' '&lt;tipoDocumento&gt;'<br>Cuando el usuario selecciona una experiencia para comprar '&lt;nombreExperiencia&gt;' '&lt;cantidad&gt;'<br>Y realiza el proceso completo de la compra<br>Entonces el usuario visualizara un mensaje de felicitaciones por la compra</div>
     </div>
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
-            <div class="screenshotFailure panel panel-danger">
-    <div style="display:block">
-        <div class="table">
-            <div class="row">
-                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">Element click intercepted exception: element click intercepted: Element (input tabindex='-1' data-testid='input-bar-header' placeholder='Busca en nuestras experiencias' class='ant-input search-bar-header' type='text' value='') is not clickable at point (344, 32). Other element would receive the click: (div class='ant-col ant-col-24')...(/div)</span>
-                </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
-                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
-                </div>
-             </div>
-        </div>
-    <div>
-
-    <!-- Details Section -->
-    <div class="row stacktrace-details">
-      <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-overall">
-            <div class="card">
-                <div class="card-header">
-                    <h4>org.openqa.selenium.ElementClickInterceptedException </h4>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <pre>co.compensar.tasks.ComprarConPuntosExperiencia.performAs(ComprarConPuntosExperiencia.java:26)<br />co.compensar.stepDefinitions.CompraConPuntosStepDefinition.elUsuarioSeleccionaUnaExperienciaParaComprar(CompraConPuntosStepDefinition.java:18)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:56)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:330)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:51)<br />co.compensar.runners.RunnerPersonalizado.run(RunnerPersonalizado.java:55)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-                    <div class="panel-body">
-                        <a href="pagesource5807402884665278806.html" target="_blank" class="btn btn-info">HTML Source</a>
-                    </div>
-            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="2432287014685a9c901dcba66ff70bf13ce62f6bffbd7e45e07755f05277f29d.png" title=" 1: Compra de experiencia por puntos exitosa ({url=https://www.preaws.compensar.co/auth/pre-login, usuario=53021207, clave=Ab123456, nombreExperiencia=Crea accesorios para ti, tu familia o amigos hechos en cuero, tipoDocumento=C&eacute;dula de Ciudadan&iacute;a, cantidad=1})" width="1920"/>
-                <img src="2432287014685a9c901dcba66ff70bf13ce62f6bffbd7e45e07755f05277f29d.png" title=" Dado que el usuario se encuentre en pagina web de Bienestar &quot;https://www.preaws.compensar.co/auth/pre-login&quot;" width="1920"/>
-                <img src="2432287014685a9c901dcba66ff70bf13ce62f6bffbd7e45e07755f05277f29d.png" title=" Test opens the browser at https://www.preaws.compensar.co/auth/pre-login" width="1920"/>
-                <img src="2432287014685a9c901dcba66ff70bf13ce62f6bffbd7e45e07755f05277f29d.png" title=" Dado que el usuario se encuentre en pagina web de Bienestar &quot;https://www.preaws.compensar.co/auth/pre-login&quot; (completed)" width="1920"/>
+                <img src="dbf73fe95f67870094e7edc393efae986262cb9c7a22ccbd79c4db2a28cafd55.png" title=" 1: Compra de experiencia por puntos exitosa ({url=https://www.preaws.compensar.co/auth/pre-login, usuario=53021207, clave=Ab123456, nombreExperiencia=Crea accesorios y prendas &uacute;nicas con la t&eacute;cnica del tejido en crochet, tipoDocumento=C&eacute;dula de Ciudadan&iacute;a, cantidad=1})" width="1920"/>
+                <img src="dbf73fe95f67870094e7edc393efae986262cb9c7a22ccbd79c4db2a28cafd55.png" title=" Dado que el usuario se encuentra en pagina web de Bienestar &quot;https://www.preaws.compensar.co/auth/pre-login&quot;" width="1920"/>
+                <img src="dbf73fe95f67870094e7edc393efae986262cb9c7a22ccbd79c4db2a28cafd55.png" title=" Test opens the browser at https://www.preaws.compensar.co/auth/pre-login" width="1920"/>
+                <img src="08b92e9ea8e6d217c5ac8295165ea48ed9e8e98970621b5dd53e0a8db56c948e.png" title=" Dado que el usuario se encuentra en pagina web de Bienestar &quot;https://www.preaws.compensar.co/auth/pre-login&quot; (completed)" width="1920"/>
                 <img src="08b92e9ea8e6d217c5ac8295165ea48ed9e8e98970621b5dd53e0a8db56c948e.png" title=" Cuando seleccione el tipo de documento e ingrese el numero de documento con la clave '53021207' 'Ab123456' 'C&eacute;dula de Ciudadan&iacute;a'" width="1920"/>
-                <img src="08b92e9ea8e6d217c5ac8295165ea48ed9e8e98970621b5dd53e0a8db56c948e.png" title=" Test login task" width="1920"/>
-                <img src="08b92e9ea8e6d217c5ac8295165ea48ed9e8e98970621b5dd53e0a8db56c948e.png" title=" Test clicks on Bot&oacute;n de Ingresar" width="1920"/>
-                <img src="e49144d75bb02bcf5244d65e9c796491a8012bbea299ac30ed5fd4667edf4c64.png" title=" Test clicks on Bot&oacute;n de Ingresar" width="1920"/>
-                <img src="ae548ee76ef5e46485e280d3694f172ec328097e17e5311bd705c970f0e76fab.png" title=" Test clicks on Bot&oacute;n de Ingresar (completed)" width="1920"/>
-                <img src="ae548ee76ef5e46485e280d3694f172ec328097e17e5311bd705c970f0e76fab.png" title=" Test selects C&eacute;dula de Ciudadan&iacute;a on Dropdown de selecci&oacute;n de documento" width="1920"/>
-                <img src="a0e6905d4c712e218f6480c3161a1a8ef117d5e68e16a21a659688edb9431bcf.png" title=" Test selects C&eacute;dula de Ciudadan&iacute;a on Dropdown de selecci&oacute;n de documento (completed)" width="1920"/>
-                <img src="a0e6905d4c712e218f6480c3161a1a8ef117d5e68e16a21a659688edb9431bcf.png" title=" Test enters '53021207' into Campo de texto para usuario" width="1920"/>
-                <img src="a842c13d7b265868a0c2a133a50ad13461bc8f1330b5247ecb6b791c28792061.png" title=" Test enters '53021207' into Campo de texto para usuario" width="1920"/>
-                <img src="d7e61531a99c135bb29c2f8916f1f1d5b1328f1f33fca9bc908972f7a5006b09.png" title=" Test enters '53021207' into Campo de texto para usuario (completed)" width="1920"/>
-                <img src="d7e61531a99c135bb29c2f8916f1f1d5b1328f1f33fca9bc908972f7a5006b09.png" title=" Test enters 'Ab123456' into Campo de texto para contrase&ntilde;a" width="1920"/>
-                <img src="aa7e18e4e25083807df861cb879a684a28ece660fa0e9449f40c62ac1f9860bf.png" title=" Test enters 'Ab123456' into Campo de texto para contrase&ntilde;a" width="1920"/>
-                <img src="b52511a0587a6a1ff729e65dc3bf9ffa50149d9bb9e706ad64cd4891e058a315.png" title=" Test enters 'Ab123456' into Campo de texto para contrase&ntilde;a (completed)" width="1920"/>
-                <img src="b52511a0587a6a1ff729e65dc3bf9ffa50149d9bb9e706ad64cd4891e058a315.png" title=" Test clicks on Bot&oacute;n de Ingresar a la cuenta" width="1920"/>
-                <img src="a5d0dcc9cadbc7f512171b764c6c31e8ba0094be51a58771203889935a85a922.png" title=" Test clicks on Bot&oacute;n de Ingresar a la cuenta (completed)" width="1920"/>
-                <img src="2e8ee62d3fd94a902aaf807a848558f84a4e91749758f0934ccd04e833a7a614.png" title=" Test login task (completed)" width="1920"/>
-                <img src="2e8ee62d3fd94a902aaf807a848558f84a4e91749758f0934ccd04e833a7a614.png" title=" Cuando seleccione el tipo de documento e ingrese el numero de documento con la clave '53021207' 'Ab123456' 'C&eacute;dula de Ciudadan&iacute;a' (completed)" width="1920"/>
-                <img src="2e8ee62d3fd94a902aaf807a848558f84a4e91749758f0934ccd04e833a7a614.png" title=" Cuando el usuario selecciona una experiencia para comprar 'Crea accesorios para ti, tu familia o amigos hechos en cuero' '1'" width="1920"/>
-                <img src="2e8ee62d3fd94a902aaf807a848558f84a4e91749758f0934ccd04e833a7a614.png" title=" Test comprar con puntos experiencia" width="1920"/>
-                <img src="2e8ee62d3fd94a902aaf807a848558f84a4e91749758f0934ccd04e833a7a614.png" title=" Test clicks on Campo de texto para b&uacute;squeda" width="1920"/>
-                <img src="ad5635fd625e3833669431febe79c9f40350a2abadcd65513a7cfe94ee3365f9.png" title=" Test clicks on Campo de texto para b&uacute;squeda (completed): <span class='error-color'>ERROR</span>" width="1920"/>
+                <img src="08b92e9ea8e6d217c5ac8295165ea48ed9e8e98970621b5dd53e0a8db56c948e.png" title=" Test login usuario task" width="1920"/>
+                <img src="08b92e9ea8e6d217c5ac8295165ea48ed9e8e98970621b5dd53e0a8db56c948e.png" title=" Test clicks on Bot&oacute;n de ingresar para los dem&aacute;s usuarios" width="1920"/>
+                <img src="e49144d75bb02bcf5244d65e9c796491a8012bbea299ac30ed5fd4667edf4c64.png" title=" Test clicks on Bot&oacute;n de ingresar para los dem&aacute;s usuarios (completed)" width="1920"/>
+                <img src="ae548ee76ef5e46485e280d3694f172ec328097e17e5311bd705c970f0e76fab.png" title=" Test selects C&eacute;dula de Ciudadan&iacute;a on Lista de selecci&oacute;n de documento" width="1920"/>
+                <img src="a0e6905d4c712e218f6480c3161a1a8ef117d5e68e16a21a659688edb9431bcf.png" title=" Test selects C&eacute;dula de Ciudadan&iacute;a on Lista de selecci&oacute;n de documento (completed)" width="1920"/>
+                <img src="a0e6905d4c712e218f6480c3161a1a8ef117d5e68e16a21a659688edb9431bcf.png" title=" Test enters '53021207' into Ingresar n&uacute;mero de documento de usuario" width="1920"/>
+                <img src="269e9dec06709fb41f58dc4581f0e5569686d723a6a4a8b64e11c161d9fa3eda.png" title=" Test enters '53021207' into Ingresar n&uacute;mero de documento de usuario (completed)" width="1920"/>
+                <img src="269e9dec06709fb41f58dc4581f0e5569686d723a6a4a8b64e11c161d9fa3eda.png" title=" Test enters 'Ab123456' into Ingresar clave del usuario" width="1920"/>
+                <img src="ecddada61afa3cca98d063d944477fa3fef42e6154d89fede841f88c315f5227.png" title=" Test enters 'Ab123456' into Ingresar clave del usuario (completed)" width="1920"/>
+                <img src="dbc17d030a57f6d9e99c19cecf4f36a5cf3aa93ad43b5c90a7e4adcead80a4cd.png" title=" Test clicks on Bot&oacute;n para ingresar a la cuenta" width="1920"/>
+                <img src="37def26196c2449d000a70067d46ec4cb2c6bfc7d4ab4425ef03193e6ba1b62d.png" title=" Test clicks on Bot&oacute;n para ingresar a la cuenta (completed)" width="1920"/>
+                <img src="bca77a7099b7ef6a7d73f573377d24694e43018cb8304041fb5fbf02e332ffd8.png" title=" Test should see Texto de validaci&oacute;n en la p&aacute;gina that is displayed" width="1920"/>
+                <img src="56a8233bff44d8af42a13fb52ed66941dd084edf42daac782a4da669cbf689a7.png" title=" Test should see Texto de validaci&oacute;n en la p&aacute;gina that is displayed (completed)" width="1920"/>
+                <img src="56a8233bff44d8af42a13fb52ed66941dd084edf42daac782a4da669cbf689a7.png" title=" Test login usuario task (completed)" width="1920"/>
+                <img src="14ff15f8fd05ac80503c275cd56113c7622a42b4b75cb441933f246054d6a67f.png" title=" Cuando seleccione el tipo de documento e ingrese el numero de documento con la clave '53021207' 'Ab123456' 'C&eacute;dula de Ciudadan&iacute;a' (completed)" width="1920"/>
+                <img src="14ff15f8fd05ac80503c275cd56113c7622a42b4b75cb441933f246054d6a67f.png" title=" Cuando el usuario selecciona una experiencia para comprar 'Crea accesorios y prendas &uacute;nicas con la t&eacute;cnica del tejido en crochet' '1'" width="1920"/>
+                <img src="14ff15f8fd05ac80503c275cd56113c7622a42b4b75cb441933f246054d6a67f.png" title=" Test facturacion puntos task" width="1920"/>
+                <img src="d007625be0ec6f6b6d9bacf69b31a7a6306b44e67cb7b33933d6733fccb91a56.png" title=" Test clicks on Campo de texto para b&uacute;squeda" width="1920"/>
+                <img src="b4666f93163a302472efd3cd2e6cfb85a27afe0a9b3b08c71c0f95cffbabe85b.png" title=" Test clicks on Campo de texto para b&uacute;squeda" width="1920"/>
+                <img src="348f2b73be220fd95420ea1357cdfb0f7752de619991fa1bdd8379315eb31f2f.png" title=" Test clicks on Campo de texto para b&uacute;squeda (completed)" width="1920"/>
+                <img src="ffb8692b867f89e8f9b4d309e230f7d08b6ae739fca6d69074f82e08b70cc5b2.png" title=" Test enters 'Crea accesorios y prendas &uacute;nicas con la t&eacute;cnica del tejido en crochet' into Campo de texto para b&uacute;squeda" width="1920"/>
+                <img src="fc05ab33b516ace1ce037d5c899b758a8fee184ddab92f5566f289e21d05f4f6.png" title=" Test enters 'Crea accesorios y prendas &uacute;nicas con la t&eacute;cnica del tejido en crochet' into Campo de texto para b&uacute;squeda (completed)" width="1920"/>
+                <img src="fc05ab33b516ace1ce037d5c899b758a8fee184ddab92f5566f289e21d05f4f6.png" title=" Test clicks on Bot&oacute;n para realizar la b&uacute;squeda" width="1920"/>
+                <img src="ae3360f56b8f8872f55c8031a31b659386851f6a932769e0f3ddc2072a3493a7.png" title=" Test clicks on Bot&oacute;n para realizar la b&uacute;squeda" width="1920"/>
+                <img src="7fa30ac6faa79c5cd44ca0653855af67de0b10dd687202cd2d74e2c08b00ef8c.png" title=" Test clicks on Bot&oacute;n para realizar la b&uacute;squeda (completed)" width="1920"/>
+                <img src="7f0aa236bbc4597a410a04bf443fc7ddf87bae6383e20756b3299bbe1c84d253.png" title=" Test clicks on Imagen de la experiencia" width="1920"/>
+                <img src="40dc364b5b195110e8a8a59dff8888c15b9c2ad1ddc9eca3b6e3c884495b41c9.png" title=" Test clicks on Imagen de la experiencia" width="1920"/>
+                <img src="7df9053c37e9ddbf1c3d49f585e444f84abc34108cbcfb52ea56004de630f6da.png" title=" Test clicks on Imagen de la experiencia (completed)" width="1920"/>
+                <img src="283a3ac59ea970e004467af0c11c0983d8618d53e5d63a2f84dc80d62e74089f.png" title=" Test should see Texto de validaci&oacute;n de la experiencia that is displayed" width="1920"/>
+                <img src="967ad6279957816196641a0b42df7300d46981f3679b296515e6091f56641d55.png" title=" Test should see Texto de validaci&oacute;n de la experiencia that is displayed (completed)" width="1920"/>
+                <img src="967ad6279957816196641a0b42df7300d46981f3679b296515e6091f56641d55.png" title=" Test clears field Campo para ingresar cantidad" width="1920"/>
+                <img src="5e595f1b165b00bd222be573db16467737f384d64a6f037b849d9bf94c7322fb.png" title=" Test clears field Campo para ingresar cantidad (completed)" width="1920"/>
+                <img src="5e595f1b165b00bd222be573db16467737f384d64a6f037b849d9bf94c7322fb.png" title=" Test enters '1' into Campo para ingresar cantidad" width="1920"/>
+                <img src="a7c9b4ee40ebc7d93a6394726edaef2142c648ccb84b0639e77cc07797730eeb.png" title=" Test enters '1' into Campo para ingresar cantidad" width="1920"/>
+                <img src="ece4f6fb44b9c280eb9f38fc3a3ef030396dbc3d439ae3c4cc586b0092071e7b.png" title=" Test enters '1' into Campo para ingresar cantidad (completed)" width="1920"/>
+                <img src="ece4f6fb44b9c280eb9f38fc3a3ef030396dbc3d439ae3c4cc586b0092071e7b.png" title=" Test clicks on Bot&oacute;n para agregar al carrito" width="1920"/>
+                <img src="9b16449490502a662e5aa146f4ae3ae9a6949c38da147b66ccded8829a631d10.png" title=" Test clicks on Bot&oacute;n para agregar al carrito (completed)" width="1920"/>
+                <img src="2d1a14a2a4899a22ed1fb0ecbecee7a099e27e9ac5c1709d2f607dc776fd916e.png" title=" Test clicks on Bot&oacute;n para ir al carrito" width="1920"/>
+                <img src="da41181427d001425cd8df7a9c784c17b5cb288557855521c0f5b6640a204009.png" title=" Test clicks on Bot&oacute;n para ir al carrito" width="1920"/>
+                <img src="012224843484e24803833b2030993773ac38c6c1fd46c1a50f44565798c0fd61.png" title=" Test clicks on Bot&oacute;n para ir al carrito (completed)" width="1920"/>
+                <img src="012224843484e24803833b2030993773ac38c6c1fd46c1a50f44565798c0fd61.png" title=" Test clicks on Bot&oacute;n para ir a pagar" width="1920"/>
+                <img src="2a5336938b3f00714a9fe0b6baca879e592095c2276267bdcd724e860ef8251e.png" title=" Test clicks on Bot&oacute;n para ir a pagar" width="1920"/>
+                <img src="7193e75cd841860157036b853de067b5ea0300f119cdcd9a000119c1dbf467e0.png" title=" Test clicks on Bot&oacute;n para ir a pagar (completed)" width="1920"/>
+                <img src="9273ac6c9749b01117992421d850f6117cabe7161ee44ac9cb307e3eff4696ec.png" title=" Test clicks on Bot&oacute;n para continuar con el pago" width="1920"/>
+                <img src="b19b39591b0cab8bcc099602a3fd92bb2dec0c917899a06f573dd0e44afe0011.png" title=" Test clicks on Bot&oacute;n para continuar con el pago (completed)" width="1920"/>
+                <img src="b19b39591b0cab8bcc099602a3fd92bb2dec0c917899a06f573dd0e44afe0011.png" title=" Test clicks on Bot&oacute;n para comprar" width="1920"/>
+                <img src="5954650ad8e903355efc1f22d775444f2dfc8923702af32225075826b9ff636f.png" title=" Test clicks on Bot&oacute;n para comprar (completed)" width="1920"/>
+                <img src="8ac69f172e27d4d81865c6f45eeb36d216e0af151966a012524eaf385558c893.png" title=" Test should see Texto de validaci&oacute;n del t&iacute;tulo del mensaje that is displayed" width="1920"/>
+                <img src="8ac69f172e27d4d81865c6f45eeb36d216e0af151966a012524eaf385558c893.png" title=" Test should see Texto de validaci&oacute;n del contenido del mensaje that is displayed" width="1920"/>
+                <img src="8ac69f172e27d4d81865c6f45eeb36d216e0af151966a012524eaf385558c893.png" title=" Test clicks on Clic en bot&oacute;n: Entendido" width="1920"/>
+                <img src="1f315033ba87cf91a81ce009cd373fb7e9e7d80f25b1323b3abd89884dad1671.png" title=" Test clicks on Clic en bot&oacute;n: Entendido" width="1920"/>
+                <img src="b827e94a15a03af0a04a539d6a5f448bd5db00874a42fc6b21f4a1a12872baec.png" title=" Test clicks on Clic en bot&oacute;n: Entendido (completed)" width="1920"/>
+                <img src="b827e94a15a03af0a04a539d6a5f448bd5db00874a42fc6b21f4a1a12872baec.png" title=" Test should see Valida t&iacute;tulo de BONOS that is displayed" width="1920"/>
+                <img src="7cb2fbe6918ce1b34981dfcd28f635ad6085a45dea4e966f6589ab274e8c8235.png" title=" Test should see Valida t&iacute;tulo de BONOS that is displayed (completed)" width="1920"/>
+                <img src="43a649d36d144cd7cd70964c41ba95e6e6705b2f21f41b83302d185d643ad4aa.png" title=" Test clicks on Clic en logo del perfil" width="1920"/>
+                <img src="7e9cd3f5b32dec40e331cbae37f933ecd396ce2c7b646ecc81373892a43ce42f.png" title=" Test clicks on Clic en logo del perfil" width="1920"/>
+                <img src="09350ae80aaed9e09a8c8aee1ff235be88c51c31eecc91a84ef5080533e5d5a5.png" title=" Test clicks on Clic en logo del perfil (completed)" width="1920"/>
+                <img src="09350ae80aaed9e09a8c8aee1ff235be88c51c31eecc91a84ef5080533e5d5a5.png" title=" Test clicks on Cierra la sesi&oacute;n" width="1920"/>
+                <img src="105d3aeca198dc2586816ab42855bcf588bf10bdb88a3af8dc236bae50434b60.png" title=" Test clicks on Cierra la sesi&oacute;n" width="1920"/>
+                <img src="012e97f7a1f4338d3c18f8412dc7912bf0013be195afe4a8be7b4e07c87b509c.png" title=" Test clicks on Cierra la sesi&oacute;n (completed)" width="1920"/>
+                <img src="012e97f7a1f4338d3c18f8412dc7912bf0013be195afe4a8be7b4e07c87b509c.png" title=" Test facturacion puntos task (completed)" width="1920"/>
+                <img src="012e97f7a1f4338d3c18f8412dc7912bf0013be195afe4a8be7b4e07c87b509c.png" title=" Cuando el usuario selecciona una experiencia para comprar 'Crea accesorios y prendas &uacute;nicas con la t&eacute;cnica del tejido en crochet' '1' (completed)" width="1920"/>
+                <img src="96327a9ea257ae0fb0f060bba29ce18cb83717333c26260b3c6bfb9dc34d3619.png" title=" Y realiza el proceso completo de la compra" width="1920"/>
+                <img src="0df41e01809cd5971859cf8be88f81c8566567a9a61d81b45d702cb39d9a78c1.png" title=" Entonces el usuario visualizara un mensaje de felicitaciones por la compra" width="1920"/>
+                <img src="1081f72355bb00c0230c66d09f542d02725fe9f1c27277afa40584cf4534d5b6.png" title=" Entonces el usuario visualizara un mensaje de felicitaciones por la compra (completed)" width="1920"/>
+                <img src="1081f72355bb00c0230c66d09f542d02725fe9f1c27277afa40584cf4534d5b6.png" title=" 1: Compra de experiencia por puntos exitosa ({url=https://www.preaws.compensar.co/auth/pre-login, usuario=53021207, clave=Ab123456, nombreExperiencia=Crea accesorios y prendas &uacute;nicas con la t&eacute;cnica del tejido en crochet, tipoDocumento=C&eacute;dula de Ciudadan&iacute;a, cantidad=1}) (completed)" width="1920"/>
+                <img src="0aad094482d5c8ebc1901c1fd655fbf52f1cbbebe5f0ace8a48e4454f65b9b12.png" title=" 2: Compra de experiencia por puntos exitosa ({url=https://www.preaws.compensar.co/auth/pre-login, usuario=1000005222, clave=Ab123456, nombreExperiencia=Curso virtual de pintura en acuarela, tipoDocumento=C&eacute;dula de Ciudadan&iacute;a, cantidad=2})" width="1920"/>
+                <img src="0aad094482d5c8ebc1901c1fd655fbf52f1cbbebe5f0ace8a48e4454f65b9b12.png" title=" Dado que el usuario se encuentra en pagina web de Bienestar &quot;https://www.preaws.compensar.co/auth/pre-login&quot;" width="1920"/>
+                <img src="0aad094482d5c8ebc1901c1fd655fbf52f1cbbebe5f0ace8a48e4454f65b9b12.png" title=" Test opens the browser at https://www.preaws.compensar.co/auth/pre-login" width="1920"/>
+                <img src="08b92e9ea8e6d217c5ac8295165ea48ed9e8e98970621b5dd53e0a8db56c948e.png" title=" Dado que el usuario se encuentra en pagina web de Bienestar &quot;https://www.preaws.compensar.co/auth/pre-login&quot; (completed)" width="1920"/>
+                <img src="08b92e9ea8e6d217c5ac8295165ea48ed9e8e98970621b5dd53e0a8db56c948e.png" title=" Cuando seleccione el tipo de documento e ingrese el numero de documento con la clave '1000005222' 'Ab123456' 'C&eacute;dula de Ciudadan&iacute;a'" width="1920"/>
+                <img src="08b92e9ea8e6d217c5ac8295165ea48ed9e8e98970621b5dd53e0a8db56c948e.png" title=" Test login usuario task" width="1920"/>
+                <img src="08b92e9ea8e6d217c5ac8295165ea48ed9e8e98970621b5dd53e0a8db56c948e.png" title=" Test clicks on Bot&oacute;n de ingresar para los dem&aacute;s usuarios" width="1920"/>
+                <img src="e49144d75bb02bcf5244d65e9c796491a8012bbea299ac30ed5fd4667edf4c64.png" title=" Test clicks on Bot&oacute;n de ingresar para los dem&aacute;s usuarios (completed)" width="1920"/>
+                <img src="e49144d75bb02bcf5244d65e9c796491a8012bbea299ac30ed5fd4667edf4c64.png" title=" Test selects C&eacute;dula de Ciudadan&iacute;a on Lista de selecci&oacute;n de documento" width="1920"/>
+                <img src="a0e6905d4c712e218f6480c3161a1a8ef117d5e68e16a21a659688edb9431bcf.png" title=" Test selects C&eacute;dula de Ciudadan&iacute;a on Lista de selecci&oacute;n de documento (completed)" width="1920"/>
+                <img src="a0e6905d4c712e218f6480c3161a1a8ef117d5e68e16a21a659688edb9431bcf.png" title=" Test enters '1000005222' into Ingresar n&uacute;mero de documento de usuario" width="1920"/>
+                <img src="96bec7c5fbcd78eaf8c485eb3e21fc04be1ddc892fb6ff531e2ec5e17d73bdb0.png" title=" Test enters '1000005222' into Ingresar n&uacute;mero de documento de usuario (completed)" width="1920"/>
+                <img src="96bec7c5fbcd78eaf8c485eb3e21fc04be1ddc892fb6ff531e2ec5e17d73bdb0.png" title=" Test enters 'Ab123456' into Ingresar clave del usuario" width="1920"/>
+                <img src="1e86d26510eb91f3f383b332f9a05e69f57532b3289f3e3f0c928d2b69cc5249.png" title=" Test enters 'Ab123456' into Ingresar clave del usuario" width="1920"/>
+                <img src="da6c016ba3f4662f39dfcf75f507bad38045bbb82f475e91a672ce6406343d1d.png" title=" Test enters 'Ab123456' into Ingresar clave del usuario (completed)" width="1920"/>
+                <img src="05abac971f6768ac1d674d077092394920767168c6419c0e1e79c6978c599007.png" title=" Test clicks on Bot&oacute;n para ingresar a la cuenta" width="1920"/>
+                <img src="cbae8038180466e937cf969661ba591fa5346fbbf231de5cffac318bc71e10f0.png" title=" Test clicks on Bot&oacute;n para ingresar a la cuenta (completed)" width="1920"/>
+                <img src="b771b881bfb4c803cdaf7aa93662f5afe02eb6907541eca39ebf9bfe8a274e8a.png" title=" Test should see Texto de validaci&oacute;n en la p&aacute;gina that is displayed" width="1920"/>
+                <img src="b771b881bfb4c803cdaf7aa93662f5afe02eb6907541eca39ebf9bfe8a274e8a.png" title=" Test login usuario task (completed)" width="1920"/>
+                <img src="b771b881bfb4c803cdaf7aa93662f5afe02eb6907541eca39ebf9bfe8a274e8a.png" title=" Cuando seleccione el tipo de documento e ingrese el numero de documento con la clave '1000005222' 'Ab123456' 'C&eacute;dula de Ciudadan&iacute;a' (completed)" width="1920"/>
+                <img src="b771b881bfb4c803cdaf7aa93662f5afe02eb6907541eca39ebf9bfe8a274e8a.png" title=" Cuando el usuario selecciona una experiencia para comprar 'Curso virtual de pintura en acuarela' '2'" width="1920"/>
+                <img src="b771b881bfb4c803cdaf7aa93662f5afe02eb6907541eca39ebf9bfe8a274e8a.png" title=" Test facturacion puntos task" width="1920"/>
+                <img src="b771b881bfb4c803cdaf7aa93662f5afe02eb6907541eca39ebf9bfe8a274e8a.png" title=" Test clicks on Campo de texto para b&uacute;squeda" width="1920"/>
+                <img src="dc04033400960504d8e7f9149fc1a831f7653cdf2c8b3c8012d85d36f29108e0.png" title=" Test clicks on Campo de texto para b&uacute;squeda" width="1920"/>
+                <img src="90d54e2e06085dc329bc4ecbddec33ba346d17a648a79cdff0e9d5cff6848f08.png" title=" Test clicks on Campo de texto para b&uacute;squeda (completed)" width="1920"/>
+                <img src="90d54e2e06085dc329bc4ecbddec33ba346d17a648a79cdff0e9d5cff6848f08.png" title=" Test enters 'Curso virtual de pintura en acuarela' into Campo de texto para b&uacute;squeda" width="1920"/>
+                <img src="1832988095768589b02384e3b7c7121f77cc9a48e8a5c8827450686cff98137b.png" title=" Test enters 'Curso virtual de pintura en acuarela' into Campo de texto para b&uacute;squeda" width="1920"/>
+                <img src="66af7f2103149cb858b6bd787fa9ff53dfc316ba0b63fbd9cfeab6eee3398fe4.png" title=" Test enters 'Curso virtual de pintura en acuarela' into Campo de texto para b&uacute;squeda (completed)" width="1920"/>
+                <img src="66af7f2103149cb858b6bd787fa9ff53dfc316ba0b63fbd9cfeab6eee3398fe4.png" title=" Test clicks on Bot&oacute;n para realizar la b&uacute;squeda" width="1920"/>
+                <img src="16df7317b71692c1fb8980ff1ad83671523413b685637d07bf4cd5e6a01e1510.png" title=" Test clicks on Bot&oacute;n para realizar la b&uacute;squeda" width="1920"/>
+                <img src="9fccebb56297339e55fe75acae768828a433a55c1856cfd6aa0c9150959c9a1d.png" title=" Test clicks on Bot&oacute;n para realizar la b&uacute;squeda (completed)" width="1920"/>
+                <img src="cc7026e7340394bf244c243358632d7bfbcbc80bad6fa52528ce8721e9911391.png" title=" Test clicks on Imagen de la experiencia" width="1920"/>
+                <img src="111b0e763d14cb599833f62e777799a7017f2092f74c9c7ddcecd5666d51dafc.png" title=" Test clicks on Imagen de la experiencia" width="1920"/>
+                <img src="f1fc4cf92fbef7a9044b6f759cc1efcf08df8996673b430a0309d4a496ef5b11.png" title=" Test clicks on Imagen de la experiencia (completed)" width="1920"/>
+                <img src="a31e05fa450ae6382d840cc74d98b4ed90143eded13b6b892cba69fa14a377fa.png" title=" Test should see Texto de validaci&oacute;n de la experiencia that is displayed" width="1920"/>
+                <img src="3fd7ede5f97d2248b19fe87a481e9ae4ddb9eb110a5d31574f9ab13fd27af8cb.png" title=" Test should see Texto de validaci&oacute;n de la experiencia that is displayed (completed)" width="1920"/>
+                <img src="3fd7ede5f97d2248b19fe87a481e9ae4ddb9eb110a5d31574f9ab13fd27af8cb.png" title=" Test clears field Campo para ingresar cantidad" width="1920"/>
+                <img src="e51a03041a5d0b93b2cdfff4b75b6aac352176531f7fedd0ed3af6c360550d6d.png" title=" Test clears field Campo para ingresar cantidad (completed)" width="1920"/>
+                <img src="e51a03041a5d0b93b2cdfff4b75b6aac352176531f7fedd0ed3af6c360550d6d.png" title=" Test enters '2' into Campo para ingresar cantidad" width="1920"/>
+                <img src="1fe6989de4e05d056c62c29a34577724e73666fa8854c734a3949d208bfa690b.png" title=" Test enters '2' into Campo para ingresar cantidad (completed)" width="1920"/>
+                <img src="1fe6989de4e05d056c62c29a34577724e73666fa8854c734a3949d208bfa690b.png" title=" Test clicks on Bot&oacute;n para agregar al carrito" width="1920"/>
+                <img src="172444e36040264fef1831546c97a410473726e2b55eba9c78da72c2d6acb86f.png" title=" Test clicks on Bot&oacute;n para agregar al carrito (completed)" width="1920"/>
+                <img src="fc9a1c17f16862be9dc2b14e8e92e5301b84409a329421cef4b64409fd2fa721.png" title=" Test clicks on Bot&oacute;n para ir al carrito" width="1920"/>
+                <img src="0e8f84a41092faff2ac4a0dc97058fd0d4de38d05279302650216ae61e397601.png" title=" Test clicks on Bot&oacute;n para ir al carrito" width="1920"/>
+                <img src="ae92b34a808041b18c448126b5c4cc5992fc017da6870a7c17c27926c0cf1ec7.png" title=" Test clicks on Bot&oacute;n para ir al carrito (completed)" width="1920"/>
+                <img src="3595e3a1a3fbf0de880c76cb0a6c5432d7db2993431846cd7ab020ede7be90cc.png" title=" Test clicks on Bot&oacute;n para ir a pagar" width="1920"/>
+                <img src="01d823f2d55ac67dcac6c70b5c8b9a2f73abc450df1c925c1480d55d309fa52c.png" title=" Test clicks on Bot&oacute;n para ir a pagar" width="1920"/>
+                <img src="fc072424cc60a409e5bdd5504d14f4cb374a514fe7bb6f49524439fc595fa4a0.png" title=" Test clicks on Bot&oacute;n para ir a pagar (completed)" width="1920"/>
+                <img src="9fcaf1fc677911aad69b4e2977fa44a199a0ffbbcaba2238d13a8da1d3dae88c.png" title=" Test clicks on Bot&oacute;n para continuar con el pago" width="1920"/>
+                <img src="b56b8be2a8e7e3c69f0f37d38e9f346ce11b5db38ae452d8e89f79c088e6cba6.png" title=" Test clicks on Bot&oacute;n para continuar con el pago (completed)" width="1920"/>
+                <img src="b56b8be2a8e7e3c69f0f37d38e9f346ce11b5db38ae452d8e89f79c088e6cba6.png" title=" Test clicks on Bot&oacute;n para comprar" width="1920"/>
+                <img src="a98c60333489e52ac8451c16e73c355516bba993c6842d190d9e1f3da9304021.png" title=" Test clicks on Bot&oacute;n para comprar (completed)" width="1920"/>
+                <img src="6214b746d9a4efbd2725cb54717290043e8c9961c38650de39a60aa43c3f1ff2.png" title=" Test should see Texto de validaci&oacute;n del t&iacute;tulo del mensaje that is displayed" width="1920"/>
+                <img src="6214b746d9a4efbd2725cb54717290043e8c9961c38650de39a60aa43c3f1ff2.png" title=" Test should see Texto de validaci&oacute;n del contenido del mensaje that is displayed" width="1920"/>
+                <img src="6214b746d9a4efbd2725cb54717290043e8c9961c38650de39a60aa43c3f1ff2.png" title=" Test clicks on Clic en bot&oacute;n: Entendido" width="1920"/>
+                <img src="3efd154180cdebaae57e3412adb02d3d9f45119d6f5fd11fa10272e75a06f1f6.png" title=" Test clicks on Clic en bot&oacute;n: Entendido" width="1920"/>
+                <img src="6aee7e663cfb8546a4615faeb4bcab9916f0169ea49c47bd11ed5a949cf0c9e7.png" title=" Test clicks on Clic en bot&oacute;n: Entendido (completed)" width="1920"/>
+                <img src="6aee7e663cfb8546a4615faeb4bcab9916f0169ea49c47bd11ed5a949cf0c9e7.png" title=" Test should see Valida t&iacute;tulo de BONOS that is displayed" width="1920"/>
+                <img src="f79ea2243a78bf58810e7dae32a9c2fe4837eacac5bd9eb1e7cf2ae7e26edc95.png" title=" Test should see Valida t&iacute;tulo de BONOS that is displayed (completed)" width="1920"/>
+                <img src="446d6607cf2b4d6d201b985da44a4f88dace6f976dfe0ad0de78ea2c724b120d.png" title=" Test clicks on Clic en logo del perfil" width="1920"/>
+                <img src="d95294df228964e5fd1ba291a6f1b371edaeffd713ef1c896c4d58cc2a2c5871.png" title=" Test clicks on Clic en logo del perfil" width="1920"/>
+                <img src="a380eb3029f34ec67762de556c30b1da6c54adb86a97fbde806986dcb8a5478d.png" title=" Test clicks on Clic en logo del perfil (completed)" width="1920"/>
+                <img src="a380eb3029f34ec67762de556c30b1da6c54adb86a97fbde806986dcb8a5478d.png" title=" Test clicks on Cierra la sesi&oacute;n" width="1920"/>
+                <img src="96327a9ea257ae0fb0f060bba29ce18cb83717333c26260b3c6bfb9dc34d3619.png" title=" Test clicks on Cierra la sesi&oacute;n" width="1920"/>
+                <img src="33fe06ece17d8f9336e3f179d018ce877650025f21c750ba08b364d956040f48.png" title=" Test clicks on Cierra la sesi&oacute;n (completed)" width="1920"/>
+                <img src="33fe06ece17d8f9336e3f179d018ce877650025f21c750ba08b364d956040f48.png" title=" Test facturacion puntos task (completed)" width="1920"/>
+                <img src="33fe06ece17d8f9336e3f179d018ce877650025f21c750ba08b364d956040f48.png" title=" Cuando el usuario selecciona una experiencia para comprar 'Curso virtual de pintura en acuarela' '2' (completed)" width="1920"/>
+                <img src="33fe06ece17d8f9336e3f179d018ce877650025f21c750ba08b364d956040f48.png" title=" Y realiza el proceso completo de la compra" width="1920"/>
+                <img src="96327a9ea257ae0fb0f060bba29ce18cb83717333c26260b3c6bfb9dc34d3619.png" title=" Y realiza el proceso completo de la compra (completed)" width="1920"/>
+                <img src="96327a9ea257ae0fb0f060bba29ce18cb83717333c26260b3c6bfb9dc34d3619.png" title=" Entonces el usuario visualizara un mensaje de felicitaciones por la compra" width="1920"/>
+                <img src="96327a9ea257ae0fb0f060bba29ce18cb83717333c26260b3c6bfb9dc34d3619.png" title=" 2: Compra de experiencia por puntos exitosa ({url=https://www.preaws.compensar.co/auth/pre-login, usuario=1000005222, clave=Ab123456, nombreExperiencia=Curso virtual de pintura en acuarela, tipoDocumento=C&eacute;dula de Ciudadan&iacute;a, cantidad=2}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
             </div>
         </div>
 

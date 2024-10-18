@@ -1,8 +1,6 @@
 package co.compensar.runners;
 
 
-
-
 import co.compensar.utils.BeforeSuite;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.Description;
@@ -18,6 +16,7 @@ public class RunnerPersonalizado extends Runner {
 
     private Class<CucumberWithSerenity> classValue;
     private CucumberWithSerenity cucumberWithSerenity;
+
     public RunnerPersonalizado(Class<CucumberWithSerenity> classValue) throws Exception {
         this.classValue = classValue;
         cucumberWithSerenity = new CucumberWithSerenity(classValue);

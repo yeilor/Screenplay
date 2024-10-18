@@ -14,14 +14,14 @@ public class PaginaDeExperiencia {
     public static final Target BTN_BUSCAR = Target.the("Botón para realizar la búsqueda")
             .located(By.xpath("//span[@class='anticon anticon-search icon-search-bar-header']"));
 
-    public static final Target IMB_EXPERIENCIA = Target.the("Imagen de la experiencia")
+    public static final Target IMG_EXPERIENCIA = Target.the("Imagen de la experiencia")
             .located(By.className("cardExperienceImg"));
 
     public static final Target TXT_VALIDAR_EXPERIENCIA = Target.the("Texto de validación de la experiencia")
             .located(By.className("singleExperienceNameAndLogo"));
 
-    public static final Target BTN_INCREMENTAR_CANTIDAD = Target.the("Botón para incrementar la cantidad")
-            .located(By.xpath("//button[@class='btn-plus']"));
+    public static final Target BTN_INGRESA_CANT = Target.the("Campo para ingresar cantidad")
+            .located(By.xpath("//input[@class='ant-input count']"));
 
     public static final Target BTN_AGREGAR_CARRITO = Target.the("Botón para agregar al carrito")
             .located(By.xpath("//button[@id='btn-add-to-cart']"));
@@ -43,4 +43,16 @@ public class PaginaDeExperiencia {
 
     public static final Target TXT_VALIDAR_CONTENIDO_MENSAJE = Target.the("Texto de validación del contenido del mensaje")
             .located(By.xpath("//p/span[contains(text(),'')]"));
+
+    public static final Target BTN_ENTENDIDO = Target.the("Clic en botón: Entendido")
+            .located(By.xpath("//button[contains(text(),'Entendido')]"));
+
+    public static final Target LBL_BONOS = Target.the("Valida título de BONOS")
+            .located(By.id("CouponTitle"));
+
+    public static final Target IMG_PERFIL = Target.the("Clic en logo del perfil")
+            .located(By.xpath("//img[@class='NavHeaderAvatar']"));
+
+    public static final Target BTN_CERRAR_SESION = Target.the("Cierra la sesión")
+            .located(By.xpath("(//span[@class='ant-dropdown-menu-title-content'])[2]"));
 }

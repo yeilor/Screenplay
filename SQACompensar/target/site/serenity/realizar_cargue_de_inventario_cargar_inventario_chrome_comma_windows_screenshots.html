@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">SQACompensar</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="feature_realizar_cargue_de_inventario.html">Realizar Cargue De Inventario</a></span>
+                > <span class="truncate-60"><a
+                    href="realizar_cargue_de_inventario_cargar_inventario_chrome_comma_windows.html">Cargar inventario </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="requirement_type_feature.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 16-10-2024 09:22</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Realizar Cargue De Inventario </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="tag_inventario.html">Inventario
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="context_chrome.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="context_windows.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="context_chrome_c__windows.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">Cargar inventario
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Dado que el usuario se encuentra en la pagina web de Bienestar &quot;&lt;urL&gt;&quot;<br>Cuando seleccione el tipo de documento ingresando el numero de documento con la clave '&lt;usuario&gt;' '&lt;clave&gt;' '&lt;tipoDocumento&gt;'<br>Cuando realiza un cargue de inventario '&lt;buscar&gt;'<br>Entonces visualizara un mensaje de Carga Exitosa</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected: an element that is visible but: no matching element found by [[ChromeDriver: chrome on WINDOWS (a461807ad3480cc185baa1602d24a8bd)] -) xpath: (//input[@class='ant-radio-input'])[1]]</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>co.compensar.tasks.CargarinventarioTask.performAs(CargarinventarioTask.java:29)<br />co.compensar.stepDefinitions.CargarInventarioStepDefinitions.realizaUnCargueDeInventario(CargarInventarioStepDefinitions.java:12)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:56)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:330)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:51)<br />co.compensar.runners.RunnerPersonalizado.run(RunnerPersonalizado.java:55)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource6007867191229684761.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="b5eaee00f66205353cefd8be41646882ea2d4d44d6aba974c1503e4e4a1075bf.png" title=" 1: Cargar inventario ({urL=https://admin.preaws.compensar.co/auth/pre-login, usuario=1000134386, clave=Ab1234567890*, tipoDocumento=C&eacute;dula de Ciudadan&iacute;a, buscar=Crepes&amp;Waffles})" width="1920"/>
+                <img src="b5eaee00f66205353cefd8be41646882ea2d4d44d6aba974c1503e4e4a1075bf.png" title=" Dado que el usuario se encuentra en la pagina web de Bienestar &quot;https://admin.preaws.compensar.co/auth/pre-login&quot;" width="1920"/>
+                <img src="b5eaee00f66205353cefd8be41646882ea2d4d44d6aba974c1503e4e4a1075bf.png" title=" Test opens the browser at https://admin.preaws.compensar.co/auth/pre-login" width="1920"/>
+                <img src="763eca5ebc9151f20b060b296d9d3d4a8531a8183397ca82aa669b5e93bba2a3.png" title=" Dado que el usuario se encuentra en la pagina web de Bienestar &quot;https://admin.preaws.compensar.co/auth/pre-login&quot; (completed)" width="1920"/>
+                <img src="763eca5ebc9151f20b060b296d9d3d4a8531a8183397ca82aa669b5e93bba2a3.png" title=" Cuando seleccione el tipo de documento ingresando el numero de documento con la clave '1000134386' 'Ab1234567890*' 'C&eacute;dula de Ciudadan&iacute;a'" width="1920"/>
+                <img src="763eca5ebc9151f20b060b296d9d3d4a8531a8183397ca82aa669b5e93bba2a3.png" title=" Test login usuario admin task" width="1920"/>
+                <img src="763eca5ebc9151f20b060b296d9d3d4a8531a8183397ca82aa669b5e93bba2a3.png" title=" Test clicks on Bot&oacute;n de ingresar como Admin" width="1920"/>
+                <img src="e49144d75bb02bcf5244d65e9c796491a8012bbea299ac30ed5fd4667edf4c64.png" title=" Test clicks on Bot&oacute;n de ingresar como Admin" width="1920"/>
+                <img src="ae548ee76ef5e46485e280d3694f172ec328097e17e5311bd705c970f0e76fab.png" title=" Test clicks on Bot&oacute;n de ingresar como Admin (completed)" width="1920"/>
+                <img src="ae548ee76ef5e46485e280d3694f172ec328097e17e5311bd705c970f0e76fab.png" title=" Test selects C&eacute;dula de Ciudadan&iacute;a on Lista de selecci&oacute;n de documento" width="1920"/>
+                <img src="a0e6905d4c712e218f6480c3161a1a8ef117d5e68e16a21a659688edb9431bcf.png" title=" Test selects C&eacute;dula de Ciudadan&iacute;a on Lista de selecci&oacute;n de documento (completed)" width="1920"/>
+                <img src="a0e6905d4c712e218f6480c3161a1a8ef117d5e68e16a21a659688edb9431bcf.png" title=" Test enters '1000134386' into Ingresar n&uacute;mero de documento de usuario" width="1920"/>
+                <img src="19b2a72f54b71da27ba408129fd30635c2d12e2a7fb13db834cadd0a4a4b2032.png" title=" Test enters '1000134386' into Ingresar n&uacute;mero de documento de usuario (completed)" width="1920"/>
+                <img src="19b2a72f54b71da27ba408129fd30635c2d12e2a7fb13db834cadd0a4a4b2032.png" title=" Test enters 'Ab1234567890*' into Ingresar clave del usuario" width="1920"/>
+                <img src="0e82cfbfc7ba95e5a0be6279b0c35724d7f0ba6876ac6819c131c9dad7565339.png" title=" Test enters 'Ab1234567890*' into Ingresar clave del usuario (completed)" width="1920"/>
+                <img src="04a8f8e9d15fd8211bab38b6cc6b89777bf868c3f3d3784823c95a46df4a672d.png" title=" Test clicks on Bot&oacute;n para ingresar a la cuenta" width="1920"/>
+                <img src="ce5fdacb96693961b506425bcf46edeb46f09d304939b8282904f8fe5d71bf18.png" title=" Test clicks on Bot&oacute;n para ingresar a la cuenta" width="1920"/>
+                <img src="e81b50b46dc98c3f68f36445960fd7f41c24f70da96c21b3daa5eeeb1846da54.png" title=" Test clicks on Bot&oacute;n para ingresar a la cuenta (completed)" width="1920"/>
+                <img src="e81b50b46dc98c3f68f36445960fd7f41c24f70da96c21b3daa5eeeb1846da54.png" title=" Test should see Valida el t&iacute;tulo Administrador de Plataforma that is displayed" width="1920"/>
+                <img src="c68befa3163b5f8593335420140548f268609f2f72eae9de97d427a774050388.png" title=" Test should see Valida el t&iacute;tulo Administrador de Plataforma that is displayed (completed)" width="1920"/>
+                <img src="c68befa3163b5f8593335420140548f268609f2f72eae9de97d427a774050388.png" title=" Test login usuario admin task (completed)" width="1920"/>
+                <img src="b658b17ac425daacee274c3e8153e48704196e6a2d9943f2839c039fce2c8835.png" title=" Cuando seleccione el tipo de documento ingresando el numero de documento con la clave '1000134386' 'Ab1234567890*' 'C&eacute;dula de Ciudadan&iacute;a' (completed)" width="1920"/>
+                <img src="b658b17ac425daacee274c3e8153e48704196e6a2d9943f2839c039fce2c8835.png" title=" Cuando realiza un cargue de inventario 'Crepes&amp;Waffles'" width="1920"/>
+                <img src="56552adeaff26979cb4f8fd99266b7ef8eec3e3389327f9525130a40daa8ac3e.png" title=" Test cargarinventario task" width="1920"/>
+                <img src="bc4a62de3f2f271c721b470596c1a5f733921e8dbd94e101900920250572dd0b.png" title=" Test clicks on Despliega el listado del men&uacute; Inventarios" width="1920"/>
+                <img src="c2a87be0ec390bb2b978da1961d0e392a3d233854c8b053a6f95dc4fc57454b7.png" title=" Test clicks on Despliega el listado del men&uacute; Inventarios" width="1920"/>
+                <img src="08e576072ceb914a94778c2fd9c9b93686e45c853d144c74c1d2398e764dc61e.png" title=" Test clicks on Despliega el listado del men&uacute; Inventarios (completed)" width="1920"/>
+                <img src="08e576072ceb914a94778c2fd9c9b93686e45c853d144c74c1d2398e764dc61e.png" title=" Test clicks on Da clic en la opci&oacute;n Inventario para realizar un cargue" width="1920"/>
+                <img src="9bd1c01f6ab112ea1905d65f83eba73aebade217193ee5ce3d13b47856bc1eec.png" title=" Test clicks on Da clic en la opci&oacute;n Inventario para realizar un cargue" width="1920"/>
+                <img src="a0ead3dd7dc8af1ffdfe1cae716bfd43d317ee9df74be9ce287e9d5462326794.png" title=" Test clicks on Da clic en la opci&oacute;n Inventario para realizar un cargue (completed)" width="1920"/>
+                <img src="a0ead3dd7dc8af1ffdfe1cae716bfd43d317ee9df74be9ce287e9d5462326794.png" title=" Test enters 'Crepes&amp;Waffles' into Permite ingresar texto para realizar b&uacute;squeda" width="1920"/>
+                <img src="3e872d9389e12d72d84876cbe9036c36aa09c8729a52f2eebdd12915eb891c7e.png" title=" Test enters 'Crepes&amp;Waffles' into Permite ingresar texto para realizar b&uacute;squeda (completed): <span class='failing-color'>FAILURE</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.7.1</span>
+</div>
+</body>
+</html>

@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class ListaDesplegables {
 
-    public void seleccionarTextoVisible(By elemento, String texto, WebDriver driver){
+    public void seleccionarTextoVisible(By elemento, String texto, WebDriver driver) {
         if (texto == null || texto.isEmpty()) {
             throw new IllegalArgumentException("The text to be selected cannot be null or empty");
         }

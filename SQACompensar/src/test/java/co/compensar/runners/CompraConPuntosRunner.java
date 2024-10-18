@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 
 import java.io.IOException;
 
-@CucumberOptions (features = "src/test/resources/features/compraConPuntos.feature",
-        tags= "@Compra",
+@CucumberOptions(features = "src/test/resources/features/compraConPuntos.feature",
+        tags = "@Compra",
         glue = "co.compensar.stepDefinitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE)
 

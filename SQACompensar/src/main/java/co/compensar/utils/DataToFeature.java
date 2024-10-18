@@ -10,24 +10,25 @@ import java.util.Map.Entry;
 
 /**
  * Ingresa los datos obtenidos del archivo de Excel al archivo feature del cual se está llamando
- * @since 27/11/2017
- * @author bgaona
  *
+ * @author bgaona
+ * @since 27/11/2017
  */
 public class DataToFeature {
 
     /**
      * Ingresa los datos obtenidos de un excel al archivo .feature del cual se está llamando, hace que se genere la tabla en el escenario
      * Outline como Data Table
-     * @since 27/11/2017
-     * @author bgaona
+     *
      * @param featureFile Nombre del archivo .feature el cual se modificará, debe tener la ruta del archivo y la hoja ser usada
      * @return
      * @throws InvalidFormatException
      * @throws IOException
+     * @author bgaona
+     * @since 27/11/2017
      */
 
-    private static List<String> setExcelDataToFeature2(File featureFile)throws InvalidFormatException, IOException {
+    private static List<String> setExcelDataToFeature2(File featureFile) throws InvalidFormatException, IOException {
         List<String> fileData = new ArrayList<String>();
         try (BufferedReader buffReader = new BufferedReader(
                 new InputStreamReader(new BufferedInputStream(new FileInputStream(featureFile)), "UTF-8"))) {
@@ -37,48 +38,40 @@ public class DataToFeature {
             boolean featureData = false;
             boolean esUnRango = false;
             boolean esMultiple = false;
-            boolean esRangoDefinido=false;
+            boolean esRangoDefinido = false;
             while ((data = buffReader.readLine()) != null) {
-                String [] dataVector = null;
-                String [] dataVectorRango=null;
+                String[] dataVector = null;
+                String[] dataVectorRango = null;
                 String sheetName = null;
                 String excelFilePath = null;
                 String excelDataRange = null;
-                int filaSeleccionada=0;
-                int pos=0;
+                int filaSeleccionada = 0;
+                int pos = 0;
                 if (data.trim().contains("##@externaldata")) {
                     dataVector = data.trim().split("@");
                     excelFilePath = dataVector[2];//data.substring(StringUtils.ordinalIndexOf(data, "@", 2)+1, data.lastIndexOf("@"));
                     sheetName = dataVector[3];//data.substring(data.lastIndexOf("@")+1, data.length());
-                    if (dataVector.length == 4)
-                    {
-                        esUnRango=true;
+                    if (dataVector.length == 4) {
+                        esUnRango = true;
                     }
-                    if (dataVector.length == 5)
-                    {
-                        if(dataVector[4].toString().contains("-"))
-                        {
+                    if (dataVector.length == 5) {
+                        if (dataVector[4].toString().contains("-")) {
                             dataVectorRango = dataVector[4].trim().split("-");
                             //esUnRango=true;
-                            esRangoDefinido=true;
-                            filaSeleccionada= Integer.parseInt(dataVectorRango[pos])-1;
+                            esRangoDefinido = true;
+                            filaSeleccionada = Integer.parseInt(dataVectorRango[pos]) - 1;
 
 
-                        }
-                        else
-                        {
-                            if(dataVector[4].toString().contains(","))
-                            {
+                        } else {
+                            if (dataVector[4].toString().contains(",")) {
                                 dataVectorRango = dataVector[4].trim().split(",");
-                                esUnRango=true;
-                                esMultiple=true;
-                                filaSeleccionada= Integer.parseInt(dataVectorRango[pos])-1;
+                                esUnRango = true;
+                                esMultiple = true;
+                                filaSeleccionada = Integer.parseInt(dataVectorRango[pos]) - 1;
 
-                            }
-                            else
-                            {
+                            } else {
 
-                                filaSeleccionada=Integer.parseInt(dataVector[4])-1;
+                                filaSeleccionada = Integer.parseInt(dataVector[4]) - 1;
                             }
 
                         }
@@ -86,37 +79,28 @@ public class DataToFeature {
                     }
                     foundHashTag = true;
                     fileData.add(data);
-                } if (foundHashTag) {
+                }
+                if (foundHashTag) {
                     excelData = new LectorExcel().getData(excelFilePath, sheetName);
 
-                    for (int rowNumber = filaSeleccionada; rowNumber < excelData.size()-1; rowNumber++) {
+                    for (int rowNumber = filaSeleccionada; rowNumber < excelData.size() - 1; rowNumber++) {
                         String cellData = "";
                         for (Entry<String, String> mapData : excelData.get(rowNumber).entrySet()) {
-                            if (dataVectorRango==null)
-                            {
-                                if(rowNumber==filaSeleccionada-1 && esUnRango==false)
-                                {
+                            if (dataVectorRango == null) {
+                                if (rowNumber == filaSeleccionada - 1 && esUnRango == false) {
+                                    cellData = cellData + "   |" + mapData.getValue();
+                                } else {
                                     cellData = cellData + "   |" + mapData.getValue();
                                 }
-                                else
-                                {
-                                    cellData = cellData + "   |" + mapData.getValue();
-                                }
-                            }
-                            else
-                            {
+                            } else {
 
-                                if(esRangoDefinido==true)
-                                {
-                                    if(rowNumber<Integer.parseInt(dataVectorRango[1]) )
-                                    {
+                                if (esRangoDefinido == true) {
+                                    if (rowNumber < Integer.parseInt(dataVectorRango[1])) {
                                         cellData = cellData + "   |" + mapData.getValue();
                                     }
 
-                                }else
-                                {
-                                    if(rowNumber+1==Integer.parseInt(dataVectorRango[pos])   && esUnRango==true)
-                                    {
+                                } else {
+                                    if (rowNumber + 1 == Integer.parseInt(dataVectorRango[pos]) && esUnRango == true) {
                                         cellData = cellData + "   |" + mapData.getValue();
                                     }
 
@@ -124,32 +108,25 @@ public class DataToFeature {
                             }
                         }
                         fileData.add(cellData + "|");
-                        if (esUnRango==false) {
-                            if(esRangoDefinido==false)
-                                rowNumber=excelData.size();
+                        if (esUnRango == false) {
+                            if (esRangoDefinido == false)
+                                rowNumber = excelData.size();
                         }
-                        if(esMultiple==true)
-                        {
-                            if(pos+1<dataVectorRango.length)
-                            {
-                                filaSeleccionada=Integer.parseInt(dataVectorRango[pos+1])-1;
-                                rowNumber=filaSeleccionada-1;
+                        if (esMultiple == true) {
+                            if (pos + 1 < dataVectorRango.length) {
+                                filaSeleccionada = Integer.parseInt(dataVectorRango[pos + 1]) - 1;
+                                rowNumber = filaSeleccionada - 1;
                                 pos++;
-                            }
-                            else
-                            {
-                                rowNumber=excelData.size()-1;
+                            } else {
+                                rowNumber = excelData.size() - 1;
                             }
 
                         }
-                        if(esRangoDefinido==true)
-                        {
-                            if(rowNumber+1==Integer.parseInt(dataVectorRango[1]))
-                            {
-                                rowNumber=excelData.size()-1;
+                        if (esRangoDefinido == true) {
+                            if (rowNumber + 1 == Integer.parseInt(dataVectorRango[1])) {
+                                rowNumber = excelData.size() - 1;
                                 pos++;
-                            }else
-                            {
+                            } else {
                                 pos++;
                             }
 
@@ -161,10 +138,10 @@ public class DataToFeature {
                     featureData = true;
                     continue;
                 }
-                if(data.startsWith("|")||data.endsWith("|")){
-                    if(featureData){
+                if (data.startsWith("|") || data.endsWith("|")) {
+                    if (featureData) {
                         continue;
-                    } else{
+                    } else {
                         fileData.add(data);
                         continue;
                     }
@@ -178,40 +155,41 @@ public class DataToFeature {
     }
 
 
+    /**
+     * Lista de todos los features con sus respectivos archivo de excel que se usarán en la prueba
+     *
+     * @param folder Carpeta donde estarán los archivo .feature
+     * @return
+     * @author bgaona
+     * @since 27/11/2017
+     */
+    private static List<File> listOfFeatureFiles(File folder) {
+        List<File> featureFiles = new ArrayList<File>();
+        if (folder.getName().endsWith(".feature")) {
+            featureFiles.add(folder);
+        } else {
 
-/**
- * Lista de todos los features con sus respectivos archivo de excel que se usarán en la prueba
- * @since 27/11/2017
- * @author bgaona
- * @param folder Carpeta donde estarán los archivo .feature
- * @return
- */
-private static List<File> listOfFeatureFiles(File folder) {
-    List<File> featureFiles = new ArrayList<File>();
-    if (folder.getName().endsWith(".feature")) {
-        featureFiles.add(folder);
-    }else {
-
-        for (File fileEntry : folder.listFiles()) {
-            if (fileEntry.isDirectory()) {
-                featureFiles.addAll(listOfFeatureFiles(fileEntry));
-            } else {
-                if (fileEntry.isFile() && fileEntry.getName().endsWith(".feature")) {
-                    featureFiles.add(fileEntry);
+            for (File fileEntry : folder.listFiles()) {
+                if (fileEntry.isDirectory()) {
+                    featureFiles.addAll(listOfFeatureFiles(fileEntry));
+                } else {
+                    if (fileEntry.isFile() && fileEntry.getName().endsWith(".feature")) {
+                        featureFiles.add(fileEntry);
+                    }
                 }
             }
         }
+        return featureFiles;
     }
-    return featureFiles;
-}
 
     /**
      * Hace una lista con todos los features dependiendo de la ruta asignada
-     * @since 27/11/2017
-     * @author bgaona
+     *
      * @param featuresDirectoryPath Ruta donde se encuentran los features que tendrán las tablas
      * @throws IOException
      * @throws InvalidFormatException
+     * @author bgaona
+     * @since 27/11/2017
      */
     public static void overrideFeatureFiles(String featuresDirectoryPath)
     //public void overrideFeatureFiles(String featuresDirectoryPath)

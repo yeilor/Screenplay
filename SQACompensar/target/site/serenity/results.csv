@@ -1,3 +1,5 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Compra de una Experiencia","Compra de experiencia por puntos exitosa","ERROR","2024-09-19T10:51:18.0120837-05:00[America/Bogota]","0.0","54.03"
-"Compra con Puntos + Otro medio de pago","Compra con Puntos + Otro","ERROR","2024-09-19T10:40:58.1118752-05:00[America/Bogota]","0.0","65.35"
+"Realizar cargue de inventario","Cargar inventario","FAILURE","2024-10-16T09:22:24.9414538-05:00[America/Bogota]","0.0","42.48"
+"Compra de una Experiencia","Compra de experiencia por puntos exitosa","SUCCESS","2024-10-17T14:07:16.2740925-05:00[America/Bogota]","0.0","183.32"
+"Login Administrador","Login de usuario administrador exitoso","SUCCESS","2024-10-16T09:23:39.6263142-05:00[America/Bogota]","0.0","21.75"
+"Login usuario","Login de usuario exitoso","SUCCESS","2024-10-18T10:30:00.8830591-05:00[America/Bogota]","0.0","24.28"
