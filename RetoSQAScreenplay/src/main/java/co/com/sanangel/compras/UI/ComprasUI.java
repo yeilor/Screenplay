@@ -12,11 +12,11 @@ public class ComprasUI {
     public static final Target BTN_PROD1 = Target.the("boton para seleccionar el primero producto")
             .locatedBy("(//h2[@class='woocommerce-loop-product__title'])[2]");
 
+    public static final Target TXT_CANT = Target.the("ingresar la cantidad del producto")
+            .located(By.xpath("//input[@class='input-text qty text']"));
+
     public static final Target BTN_CARRITO = Target.the("boton para agregar producto al carrito")
             .locatedBy("//button[contains(text(),'carrito')]");
-
-    public static final Target TXT_CANT = Target.the("boton para ingresar la cantidad del prodcucto")
-            .locatedBy("//input[@type='number']");
 
     public static final Target TXT_NOMBRE = Target.the("caja de texto para ingresar nombre del cliente")
             .located(By.id("billing_first_name"));
@@ -39,9 +39,6 @@ public class ComprasUI {
     public static final Target LST_MUNICIPIO = Target.the("desplegar lista municipios")
             .located(By.id("order_ciudad"));
 
-    public static final Target LST_MUNIC = Target.the("seleccionar municipio")
-            .locatedBy("");
-
     public static final Target TXT_DIRECCION = Target.the("caja de texto para ingresar dirección de destinatario")
             .located(By.id("order_additional_address"));
 
@@ -57,6 +54,9 @@ public class ComprasUI {
     public static final Target TXT_FIRMA = Target.the("ingresar firma")
             .located(By.id("order_additional_card_signature"));
 
+    public static final Target BTN_MES = Target.the("cambiar mes en el calendario")
+            .located(By.xpath("//th[@class='next']"));
+
     public static final Target DTP_FECHA = Target.the("abrir calendario")
             .located(By.id("order_additional_date"));
 
@@ -65,9 +65,6 @@ public class ComprasUI {
 
     public static final Target LST_HORA = Target.the("ver lista de horarios")
             .located(By.id("order_additional_time"));
-
-    public static final Target LST_SELECHORA = Target.the("seleccionar horario")
-            .locatedBy("");
 
     public static final Target TXT_OBSERVACIONES = Target.the("caja de texto para observaciones especiales")
             .located(By.id("order_additional_card_message"));

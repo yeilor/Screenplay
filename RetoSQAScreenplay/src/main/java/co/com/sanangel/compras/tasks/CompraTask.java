@@ -1,25 +1,13 @@
 package co.com.sanangel.compras.tasks;
 
 import co.com.sanangel.compras.UI.ComprasUI;
-import co.com.sanangel.compras.models.SanAngelData;
-import net.serenitybdd.core.Serenity;
-import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
-
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.*;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import org.checkerframework.checker.units.qual.C;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-import static co.com.sanangel.compras.UI.ComprasUI.DTP_SELECFECHA;
+import static co.com.sanangel.compras.UI.ComprasUI.*;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
-
 
 public class CompraTask implements Task {
 
@@ -71,17 +59,15 @@ public class CompraTask implements Task {
 
         actor.attemptsTo(
                 // Seleccionar producto
-
                 WaitUntil.the(ComprasUI.BTN_CAJAS, isVisible()).forNoMoreThan(10).seconds(),
                 Click.on(ComprasUI.BTN_CAJAS),
                 Click.on(ComprasUI.BTN_PROD1),
-                Click.on(ComprasUI.BTN_CARRITO)
-        );
-        actor.attemptsTo(
+                Scroll.to(TXT_CANT),
+                Clear.field(TXT_CANT),
+                Enter.theValue(String.valueOf(CantidadProducto)).into(TXT_CANT),
+                Click.on(ComprasUI.BTN_CARRITO),
 
                 // Completar información del cliente
-                WaitUntil.the(ComprasUI.TXT_CANT, isVisible()).forNoMoreThan(30).seconds(),
-                Enter.theValue(String.valueOf(CantidadProducto)).into(ComprasUI.TXT_CANT),
                 Enter.theValue(NombreCliente).into(ComprasUI.TXT_NOMBRE),
                 Enter.theValue(ApellidoCliente).into(ComprasUI.TXT_APELLIDO),
                 Enter.theValue(Documento).into(ComprasUI.TXT_DOC),
@@ -99,18 +85,14 @@ public class CompraTask implements Task {
 
                 // Selección de fecha y hora
                 Click.on(ComprasUI.DTP_FECHA),
+                Click.on(ComprasUI.BTN_MES),
                 JavaScriptClick.on(DTP_SELECFECHA.of(Fecha)),
+                JavaScriptClick.on(LST_HORA),
                 SelectFromOptions.byVisibleText(Horario).from(ComprasUI.LST_HORA),
-                Enter.theValue(Observaciones).into(ComprasUI.TXT_OBSERVACIONES));
+                Enter.theValue(Observaciones).into(ComprasUI.TXT_OBSERVACIONES),
+                JavaScriptClick.on(BTN_PEDIDO),
 
-
-        WebDriver driver = Serenity.getDriver();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0, 0);");
-        WebElement botonPedido = ComprasUI.BTN_PEDIDO.resolveFor(actor).getElement();
-        js.executeScript("arguments[0].click();", botonPedido);
-
-        actor.attemptsTo(
+                //Finalizar compra
                 Click.on(ComprasUI.BTN_NEQUI),
                 Enter.theValue(CeluPago).into(ComprasUI.TXT_CEL),
                 Click.on(ComprasUI.CHK_TERMINOS),
