@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="22710f8b5eed181d69981817e486fb7e77552cc8b55fd55b0c725afb5285ddd9.html">Compra De Productos</a></span>
+                > <span class="truncate-60"><a
+                    href="9451a77e1fd743f22fbcef78fbed4c03e210174d2dab97351713f2bd2d7ac3f0.html">Compra exitosa </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 18-10-2024 08:45</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Compra De Productos </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="b7e33abe7619d82cefda21fe358074425199aafab4998745a7f9803cfbdd6a6a.html">Compra
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6fe0671aeea9e76b6998ee682216d11c7748a4152740df0586f3c256ecb3f5da.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="59736924e81ea98f655ac8eba7cd96079d8d80131e0c4360daf32a724d0b38a0.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="error-color">Compra exitosa
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given Que me encuentro en la pagina de compras de san Angel '&lt;url&gt;'<br>When agrego dos productos al carrito con diferentes cantidades '&lt;CantidadProducto&gt;' '&lt;NombreCliente&gt;' '&lt;ApellidoCliente&gt;' '&lt;Documento&gt;' '&lt;TelefonoCliente&gt;' '&lt;CorreoCliente&gt;' '&lt;NombreDestinatario&gt;' '&lt;Municipio&gt;' '&lt;Direccion&gt;' '&lt;InfoAdicional&gt;' '&lt;TelefonoDestinatario&gt;' '&lt;Mensaje&gt;' '&lt;Firma&gt;' '&lt;Horario&gt;' '&lt;Observaciones&gt;' '&lt;fecha&gt;' '&lt;CeluPago&gt;'<br>Then Se visualiza el resumen de la compra</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Unsupported operation exception: You may not select a disabled option</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.UnsupportedOperationException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>co.com.sanangel.compras.tasks.CompraTask.performAs(CompraTask.java:80)<br />co.com.sanangel.stepDefinitions.CompraStepDefinitions.agregoDosProductosAlCarritoConDiferentesCantidadesCantidadProductoNombreClienteApellidoClienteDocumentoTelefonoClienteCorreoClienteNombreDestinatarioMunicipioDireccionInfoAdicionalTelefonoDestinatarioMensajeFirmaHorarioObservaciones(CompraStepDefinitions.java:33)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:56)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:330)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:51)<br />co.com.sanangel.runnner.RunnerPersonalizado.run(RunnerPersonalizado.java:52)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource5259854463083895804.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="d1bc4fbaaaaabd39a9464edb93113c35450cd5ba56175159dbdab9b197271282.png" title=" 1: Compra exitosa ({url=https://sanangel.com.co/#/, CantidadProducto=2, NombreCliente=Lorena, ApellidoCliente=Sosa, Documento=123456, TelefonoCliente=31256874, CorreoCliente=yei@hotmail.com, NombreDestinatario=Adriana Marin, Municipio=Medell&iacute;n, Direccion=Cra 56 - 4, InfoAdicional=Casa, TelefonoDestinatario=320456789, Mensaje=Con amor, Firma=YEI, Horario=9:00 a.m. - 1:00 p.m, Observaciones=Prueba, fecha=11, CeluPago=3214785965})" width="1920"/>
+                <img src="d1bc4fbaaaaabd39a9464edb93113c35450cd5ba56175159dbdab9b197271282.png" title=" Given Que me encuentro en la pagina de compras de san Angel 'https://sanangel.com.co/#/'" width="1920"/>
+                <img src="d1bc4fbaaaaabd39a9464edb93113c35450cd5ba56175159dbdab9b197271282.png" title=" Robot opens the browser at https://sanangel.com.co/#/" width="1920"/>
+                <img src="29b1a347f47d040b0bb4e4ffb1547dc554643771cfd21401832b71b2b4319a32.png" title=" Given Que me encuentro en la pagina de compras de san Angel 'https://sanangel.com.co/#/' (completed)" width="1920"/>
+                <img src="29b1a347f47d040b0bb4e4ffb1547dc554643771cfd21401832b71b2b4319a32.png" title=" When agrego dos productos al carrito con diferentes cantidades '2' 'Lorena' 'Sosa' '123456' '31256874' 'yei@hotmail.com' 'Adriana Marin' 'Medell&iacute;n' 'Cra 56 - 4' 'Casa' '320456789' 'Con amor' 'YEI' '9:00 a.m. - 1:00 p.m' 'Prueba' '11' '3214785965'" width="1920"/>
+                <img src="125f99bd64be39c849e6e67d62b33c5da239489b534d7ade382a65cc405a0198.png" title=" Robot clicks on boton para seleccionar producto1" width="1920"/>
+                <img src="1b3a2faac5fd0a8ebecf1a90b853ed0cfe54c7b311330959fc9434de4f0484f8.png" title=" Robot clicks on boton para seleccionar producto1 (completed)" width="1920"/>
+                <img src="1b3a2faac5fd0a8ebecf1a90b853ed0cfe54c7b311330959fc9434de4f0484f8.png" title=" Robot clicks on boton para seleccionar el primero producto" width="1920"/>
+                <img src="7b443e740d574faaa2778ecf115e38f14420a37641eb1840755e7b37fec8a0b4.png" title=" Robot clicks on boton para seleccionar el primero producto (completed)" width="1920"/>
+                <img src="7b443e740d574faaa2778ecf115e38f14420a37641eb1840755e7b37fec8a0b4.png" title=" Robot clicks on boton para agregar producto al carrito" width="1920"/>
+                <img src="8eb68265b061c85506cd605a71cac3f5fc2e900bcd6473f8b2ef71368b96f51b.png" title=" Robot clicks on boton para agregar producto al carrito (completed)" width="1920"/>
+                <img src="8eb68265b061c85506cd605a71cac3f5fc2e900bcd6473f8b2ef71368b96f51b.png" title=" Robot enters '2' into boton para ingresar la cantidad del prodcucto" width="1920"/>
+                <img src="9eaad9a796d28c9d56b7014c7258e25aa41137466cded6eb30c727a3aeeab6f0.png" title=" Robot enters '2' into boton para ingresar la cantidad del prodcucto (completed)" width="1920"/>
+                <img src="9eaad9a796d28c9d56b7014c7258e25aa41137466cded6eb30c727a3aeeab6f0.png" title=" Robot enters 'Lorena' into caja de texto para ingresar nombre del cliente" width="1920"/>
+                <img src="11affcf4556a1b2cee619dcfa02d12395240fcf4222d48684126a4760a06e796.png" title=" Robot enters 'Lorena' into caja de texto para ingresar nombre del cliente" width="1920"/>
+                <img src="23527bf863ab16c5f6d5c42a1f3a457d663fdc0c91a6e4e3b76756f6ff4ab215.png" title=" Robot enters 'Lorena' into caja de texto para ingresar nombre del cliente (completed)" width="1920"/>
+                <img src="23527bf863ab16c5f6d5c42a1f3a457d663fdc0c91a6e4e3b76756f6ff4ab215.png" title=" Robot enters 'Sosa' into caja de texto para ingresar apellido del cliente" width="1920"/>
+                <img src="2bc820c8e162e8a33d3dc5a2f3849b041bd7c8e1f0ce2f80b95b92183a0ca930.png" title=" Robot enters 'Sosa' into caja de texto para ingresar apellido del cliente" width="1920"/>
+                <img src="5eaa2d53baf833560faeebd1d1de1ee1d609925e130e2fcadbc2126ddecb0c30.png" title=" Robot enters 'Sosa' into caja de texto para ingresar apellido del cliente (completed)" width="1920"/>
+                <img src="5eaa2d53baf833560faeebd1d1de1ee1d609925e130e2fcadbc2126ddecb0c30.png" title=" Robot enters '123456' into caja de texto para ingresar documento del cliente" width="1920"/>
+                <img src="efe2e2b11fae36ff1c6ff448595f6f204dfbd60c772c51b8604e97fde0adc4ab.png" title=" Robot enters '123456' into caja de texto para ingresar documento del cliente" width="1920"/>
+                <img src="81a09d6e99643d0878ff864e837ea03a92d043b8f6987116beb6a1f5ff581bf2.png" title=" Robot enters '123456' into caja de texto para ingresar documento del cliente (completed)" width="1920"/>
+                <img src="81a09d6e99643d0878ff864e837ea03a92d043b8f6987116beb6a1f5ff581bf2.png" title=" Robot enters '31256874' into caja de texto para ingresar telefono del cliente" width="1920"/>
+                <img src="760208d15fca0a127bf4b53ed9b3680bbde75f58595679ec1e478144e9da452f.png" title=" Robot enters '31256874' into caja de texto para ingresar telefono del cliente (completed)" width="1920"/>
+                <img src="760208d15fca0a127bf4b53ed9b3680bbde75f58595679ec1e478144e9da452f.png" title=" Robot enters 'yei@hotmail.com' into caja de texto para ingresar correo del cliente" width="1920"/>
+                <img src="815ac118c7132ae7d294f46e2704918f1a5f30cebbc5698c0eeabb09037f7710.png" title=" Robot enters 'yei@hotmail.com' into caja de texto para ingresar correo del cliente (completed)" width="1920"/>
+                <img src="815ac118c7132ae7d294f46e2704918f1a5f30cebbc5698c0eeabb09037f7710.png" title=" Robot enters 'Adriana Marin' into caja de texto para ingresar nombre del destinatario" width="1920"/>
+                <img src="9ad554491668279a8a3549dca3b98b4407e92e89822f477202aa154b0c897397.png" title=" Robot enters 'Adriana Marin' into caja de texto para ingresar nombre del destinatario" width="1920"/>
+                <img src="e695f8b6b00fc74c8f25c07c5f93fe3e01987222d873457b91fa167c8c2398f8.png" title=" Robot enters 'Adriana Marin' into caja de texto para ingresar nombre del destinatario (completed)" width="1920"/>
+                <img src="e316a289a957045ce3aa2d0f41395d7131e0027f764326670537a07b8abd634d.png" title=" Robot selects Medell&iacute;n on desplegar lista municipios" width="1920"/>
+                <img src="4786a41462afe8cc83b1e97fae00cdd26f44fe081dbb81602b8722975cbe7d2a.png" title=" Robot selects Medell&iacute;n on desplegar lista municipios (completed)" width="1920"/>
+                <img src="4786a41462afe8cc83b1e97fae00cdd26f44fe081dbb81602b8722975cbe7d2a.png" title=" Robot enters 'Cra 56 - 4' into caja de texto para ingresar direcci&oacute;n de destinatario" width="1920"/>
+                <img src="0f632c81b9d84509e655cdb38b4ed2a3e0106f4fe528465dd4a110f06626b883.png" title=" Robot enters 'Cra 56 - 4' into caja de texto para ingresar direcci&oacute;n de destinatario (completed)" width="1920"/>
+                <img src="0f632c81b9d84509e655cdb38b4ed2a3e0106f4fe528465dd4a110f06626b883.png" title=" Robot enters 'Casa' into caja de texto para ingresar informacion adicional" width="1920"/>
+                <img src="ad8f6c93d453a79b6bd8b91d1bdeeaacc992be3fcb812886dbe41de81275dc98.png" title=" Robot enters 'Casa' into caja de texto para ingresar informacion adicional (completed)" width="1920"/>
+                <img src="ad8f6c93d453a79b6bd8b91d1bdeeaacc992be3fcb812886dbe41de81275dc98.png" title=" Robot enters '320456789' into caja de texto para ingresar telefono destinatario" width="1920"/>
+                <img src="3c001292cc3d19dff2e2da55dda3993f9abb59db2d75806e8c77b914cbe781be.png" title=" Robot enters '320456789' into caja de texto para ingresar telefono destinatario (completed)" width="1920"/>
+                <img src="3c001292cc3d19dff2e2da55dda3993f9abb59db2d75806e8c77b914cbe781be.png" title=" Robot enters 'Con amor' into caja de texto para ingresar mensaje a la tarjeta" width="1920"/>
+                <img src="64836571b360c12bcb5871dd908404a492b490a2a9212a389c4c5b41f9da93bc.png" title=" Robot enters 'Con amor' into caja de texto para ingresar mensaje a la tarjeta (completed)" width="1920"/>
+                <img src="64836571b360c12bcb5871dd908404a492b490a2a9212a389c4c5b41f9da93bc.png" title=" Robot enters 'YEI' into ingresar firma" width="1920"/>
+                <img src="97364240b12f322e5c4171bc3f0b5126469dbe4838ea9e7199bd446f32b58c1f.png" title=" Robot enters 'YEI' into ingresar firma (completed)" width="1920"/>
+                <img src="97364240b12f322e5c4171bc3f0b5126469dbe4838ea9e7199bd446f32b58c1f.png" title=" Robot clicks on abrir calendario" width="1920"/>
+                <img src="13c561df13d0869ae54399c55010f71b0d3154c93ac0884eff79f8109df7e11f.png" title=" Robot clicks on abrir calendario (completed)" width="1920"/>
+                <img src="13c561df13d0869ae54399c55010f71b0d3154c93ac0884eff79f8109df7e11f.png" title=" Robot clicks on seleccionar fecha" width="1920"/>
+                <img src="13c561df13d0869ae54399c55010f71b0d3154c93ac0884eff79f8109df7e11f.png" title=" Robot selects 9:00 a.m. - 1:00 p.m on ver lista de horarios" width="1920"/>
+                <img src="6f20cf8f3d4ae36dfc1c253b31c0849f88bd8789dec0acc4f40d6a47a6ba41be.png" title=" 2: Compra exitosa ({url=https://sanangel.com.co/#/, CantidadProducto=5, NombreCliente=Carlos, ApellidoCliente=Ariza, Documento=654321, TelefonoCliente=32189754, CorreoCliente=carlitos@hotmail.com, NombreDestinatario=Bertilde sosa, Municipio=Bello, Direccion=Cll 5ta, InfoAdicional=Edificio, TelefonoDestinatario=325785212, Mensaje=Para ti, Firma=CAR, Horario=2:00 p.m. - 7:00 p.m, Observaciones=Prueba2, fecha=10, CeluPago=3134007885})" width="1920"/>
+                <img src="6f20cf8f3d4ae36dfc1c253b31c0849f88bd8789dec0acc4f40d6a47a6ba41be.png" title=" Given Que me encuentro en la pagina de compras de san Angel 'https://sanangel.com.co/#/'" width="1920"/>
+                <img src="6f20cf8f3d4ae36dfc1c253b31c0849f88bd8789dec0acc4f40d6a47a6ba41be.png" title=" Robot opens the browser at https://sanangel.com.co/#/" width="1920"/>
+                <img src="bb34a25aaa6ca842b9c8f029fe1a072f39d5a679a0c362b9070ff278270f3d3c.png" title=" Given Que me encuentro en la pagina de compras de san Angel 'https://sanangel.com.co/#/' (completed)" width="1920"/>
+                <img src="bb34a25aaa6ca842b9c8f029fe1a072f39d5a679a0c362b9070ff278270f3d3c.png" title=" When agrego dos productos al carrito con diferentes cantidades '5' 'Carlos' 'Ariza' '654321' '32189754' 'carlitos@hotmail.com' 'Bertilde sosa' 'Bello' 'Cll 5ta' 'Edificio' '325785212' 'Para ti' 'CAR' '2:00 p.m. - 7:00 p.m' 'Prueba2' '10' '3134007885'" width="1920"/>
+                <img src="8e0cee660843dc41b43377fc80109b041c060a2366e58bed819cf19f77f9877e.png" title=" Robot clicks on boton para seleccionar producto1" width="1920"/>
+                <img src="1b3a2faac5fd0a8ebecf1a90b853ed0cfe54c7b311330959fc9434de4f0484f8.png" title=" Robot clicks on boton para seleccionar producto1 (completed)" width="1920"/>
+                <img src="1b3a2faac5fd0a8ebecf1a90b853ed0cfe54c7b311330959fc9434de4f0484f8.png" title=" Robot clicks on boton para seleccionar el primero producto" width="1920"/>
+                <img src="7b443e740d574faaa2778ecf115e38f14420a37641eb1840755e7b37fec8a0b4.png" title=" Robot clicks on boton para seleccionar el primero producto (completed)" width="1920"/>
+                <img src="7b443e740d574faaa2778ecf115e38f14420a37641eb1840755e7b37fec8a0b4.png" title=" Robot clicks on boton para agregar producto al carrito: <span class='error-color'>ERROR</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.7.1</span>
+</div>
+</body>
+</html>
