@@ -152,7 +152,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 18-10-2024 11:37</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 22-10-2024 08:58</span>
     <br style="clear:left"/>
 </div>
 
@@ -211,9 +211,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Compra exitosa
+                                <span class="error-color">Compra exitosa
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -234,140 +234,109 @@
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Web driver exception: The following error occurred: unknown error: cannot determine loading status</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.WebDriverException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>co.com.sanangel.stepDefinitions.CompraStepDefinitions.queMeEncuentroEnLaPaginaDeComprasDeSanAngel(CompraStepDefinitions.java:26)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:56)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:330)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:51)<br />co.com.sanangel.runnner.RunnerPersonalizado.run(RunnerPersonalizado.java:52)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource5610818593865261489.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="4472bc5cacb253248a8c279b781afdbffacb5586613be4ce9c66afb809f360b9.png" title=" 1: Compra exitosa ({url=https://sanangel.com.co/#/, CantidadProducto=2, NombreCliente=Lorena, ApellidoCliente=Sosa, Documento=123456, TelefonoCliente=31256874, CorreoCliente=yei@hotmail.com, NombreDestinatario=Adriana Marin, Municipio=Medell&iacute;n, Direccion=Cra 56 - 4, InfoAdicional=Casa, TelefonoDestinatario=320456789, Mensaje=Con amor, Firma=YEI, Horario=9:00 a.m. - 1:00 p.m, Observaciones=Prueba, fecha=10, CeluPago=3214785965})" width="1920"/>
-                <img src="4472bc5cacb253248a8c279b781afdbffacb5586613be4ce9c66afb809f360b9.png" title=" Given Que me encuentro en la pagina de compras de san Angel 'https://sanangel.com.co/#/'" width="1920"/>
-                <img src="4472bc5cacb253248a8c279b781afdbffacb5586613be4ce9c66afb809f360b9.png" title=" Robot opens the browser at https://sanangel.com.co/#/" width="1920"/>
-                <img src="4472bc5cacb253248a8c279b781afdbffacb5586613be4ce9c66afb809f360b9.png" title=" Given Que me encuentro en la pagina de compras de san Angel 'https://sanangel.com.co/#/' (completed)" width="1920"/>
-                <img src="4472bc5cacb253248a8c279b781afdbffacb5586613be4ce9c66afb809f360b9.png" title=" When agrego dos productos al carrito con diferentes cantidades '2' 'Lorena' 'Sosa' '123456' '31256874' 'yei@hotmail.com' 'Adriana Marin' 'Medell&iacute;n' 'Cra 56 - 4' 'Casa' '320456789' 'Con amor' 'YEI' '9:00 a.m. - 1:00 p.m' 'Prueba' '10' '3214785965'" width="1920"/>
-                <img src="125f99bd64be39c849e6e67d62b33c5da239489b534d7ade382a65cc405a0198.png" title=" Robot clicks on boton para seleccionar producto1" width="1920"/>
-                <img src="1b3a2faac5fd0a8ebecf1a90b853ed0cfe54c7b311330959fc9434de4f0484f8.png" title=" Robot clicks on boton para seleccionar producto1" width="1920"/>
-                <img src="a63f3d6d93c28e3faa5e3e204ac730fc238ad9830494b667179cc6e72ec5b471.png" title=" Robot clicks on boton para seleccionar producto1 (completed)" width="1554"/>
-                <img src="a63f3d6d93c28e3faa5e3e204ac730fc238ad9830494b667179cc6e72ec5b471.png" title=" Robot clicks on boton para seleccionar el primero producto" width="1554"/>
-                <img src="97887f68a511943d797a9831abd609564d4dc186d691ec0f769e8e39ad606559.png" title=" Robot clicks on boton para seleccionar el primero producto (completed)" width="1920"/>
-                <img src="0f68b03ca6edea5883635ea6e557eb51df9ce2b9147339c853488b0faeef8636.png" title=" Robot clears field ingresar la cantidad del producto" width="1920"/>
-                <img src="f67ce7cc31a0f4019ea1e57e68501cc92afd1bc255160f78291dc85b5c189d16.png" title=" Robot clears field ingresar la cantidad del producto (completed)" width="1920"/>
-                <img src="f67ce7cc31a0f4019ea1e57e68501cc92afd1bc255160f78291dc85b5c189d16.png" title=" Robot enters '2' into ingresar la cantidad del producto" width="1920"/>
-                <img src="830df11407edd783a868830945c45f66bd980e50f87ad3290aeda116f69482bc.png" title=" Robot enters '2' into ingresar la cantidad del producto (completed)" width="1920"/>
-                <img src="830df11407edd783a868830945c45f66bd980e50f87ad3290aeda116f69482bc.png" title=" Robot clicks on boton para agregar producto al carrito" width="1920"/>
-                <img src="4f8bfaee464a1a94ab6f1e46cbd009ac514e039a6b4b52613153e72a89383568.png" title=" Robot clicks on boton para agregar producto al carrito (completed)" width="1920"/>
-                <img src="11cc50fe6283746cf3747252d147c5e721076716cb15fc4f70420cd6709bbb33.png" title=" Robot enters 'Lorena' into caja de texto para ingresar nombre del cliente" width="1920"/>
-                <img src="71a00f434159cee3f7355c07dd69c0c5f7cfe6c7ddf2453c2edf6e391a48c96d.png" title=" Robot enters 'Lorena' into caja de texto para ingresar nombre del cliente" width="1920"/>
-                <img src="3e8831f48049dccd832977a663dbe9255d89a8907762c42d8b8a12552e3813f6.png" title=" Robot enters 'Lorena' into caja de texto para ingresar nombre del cliente (completed)" width="1920"/>
-                <img src="3e8831f48049dccd832977a663dbe9255d89a8907762c42d8b8a12552e3813f6.png" title=" Robot enters 'Sosa' into caja de texto para ingresar apellido del cliente" width="1920"/>
-                <img src="fbacb779abe9dab7d2e421695462f09034a1db58c90f0357202307b9f89e5465.png" title=" Robot enters 'Sosa' into caja de texto para ingresar apellido del cliente (completed)" width="1920"/>
-                <img src="fbacb779abe9dab7d2e421695462f09034a1db58c90f0357202307b9f89e5465.png" title=" Robot enters '123456' into caja de texto para ingresar documento del cliente" width="1920"/>
-                <img src="04b7ff01a6b83b6331de1a0741c8f217565d197c3f07d4a1f6d8cfb092885f6e.png" title=" Robot enters '123456' into caja de texto para ingresar documento del cliente (completed)" width="1920"/>
-                <img src="04b7ff01a6b83b6331de1a0741c8f217565d197c3f07d4a1f6d8cfb092885f6e.png" title=" Robot enters '31256874' into caja de texto para ingresar telefono del cliente" width="1920"/>
-                <img src="72a618f2fc483c72e92747181059b94ab7cec45529ab640422a952e5707814ba.png" title=" Robot enters '31256874' into caja de texto para ingresar telefono del cliente (completed)" width="1920"/>
-                <img src="72a618f2fc483c72e92747181059b94ab7cec45529ab640422a952e5707814ba.png" title=" Robot enters 'yei@hotmail.com' into caja de texto para ingresar correo del cliente" width="1920"/>
-                <img src="edda881e8872c2c70d2cf6c779af40673d4d0366786d0461c043abfad54825ac.png" title=" Robot enters 'yei@hotmail.com' into caja de texto para ingresar correo del cliente (completed)" width="1920"/>
-                <img src="edda881e8872c2c70d2cf6c779af40673d4d0366786d0461c043abfad54825ac.png" title=" Robot enters 'Adriana Marin' into caja de texto para ingresar nombre del destinatario" width="1920"/>
-                <img src="c3d1dd90d22e498b52892122f50a570d2b0ec4a6f57111b6d31c0df48d1f394b.png" title=" Robot enters 'Adriana Marin' into caja de texto para ingresar nombre del destinatario (completed)" width="1920"/>
-                <img src="c3d1dd90d22e498b52892122f50a570d2b0ec4a6f57111b6d31c0df48d1f394b.png" title=" Robot selects Medell&iacute;n on desplegar lista municipios" width="1920"/>
-                <img src="71296d10ec3baef39a1b19f324bda2ff43a7138b8b96c4f219b982e02e3f3bea.png" title=" Robot selects Medell&iacute;n on desplegar lista municipios (completed)" width="1920"/>
-                <img src="71296d10ec3baef39a1b19f324bda2ff43a7138b8b96c4f219b982e02e3f3bea.png" title=" Robot enters 'Cra 56 - 4' into caja de texto para ingresar direcci&oacute;n de destinatario" width="1920"/>
-                <img src="9b7fa85a6de426606e65deca3cdcc01f22045ca3b9e736fa1c021b5232820fb2.png" title=" Robot enters 'Cra 56 - 4' into caja de texto para ingresar direcci&oacute;n de destinatario (completed)" width="1920"/>
-                <img src="9b7fa85a6de426606e65deca3cdcc01f22045ca3b9e736fa1c021b5232820fb2.png" title=" Robot enters 'Casa' into caja de texto para ingresar informacion adicional" width="1920"/>
-                <img src="368042e29cfc6ef986ed3fa14f15cc76998277d41e0aecf7fcbfa51e502bc6de.png" title=" Robot enters 'Casa' into caja de texto para ingresar informacion adicional (completed)" width="1920"/>
-                <img src="368042e29cfc6ef986ed3fa14f15cc76998277d41e0aecf7fcbfa51e502bc6de.png" title=" Robot enters '320456789' into caja de texto para ingresar telefono destinatario" width="1920"/>
-                <img src="2ca504a3babc495f3760f3adad0f43426cd7112dc72e3e2985856770bc9974d4.png" title=" Robot enters '320456789' into caja de texto para ingresar telefono destinatario (completed)" width="1920"/>
-                <img src="2ca504a3babc495f3760f3adad0f43426cd7112dc72e3e2985856770bc9974d4.png" title=" Robot enters 'Con amor' into caja de texto para ingresar mensaje a la tarjeta" width="1920"/>
-                <img src="1c31186c9a1ec7d02d3aaccba79098c588d1a7b2cb055f8af94053bf879e56bd.png" title=" Robot enters 'Con amor' into caja de texto para ingresar mensaje a la tarjeta (completed)" width="1920"/>
-                <img src="1c31186c9a1ec7d02d3aaccba79098c588d1a7b2cb055f8af94053bf879e56bd.png" title=" Robot enters 'YEI' into ingresar firma" width="1920"/>
-                <img src="4adaf3b1e4508fa19e2d23ae3c71b1907b116df974a7dcced537bfbf743d719f.png" title=" Robot enters 'YEI' into ingresar firma (completed)" width="1920"/>
-                <img src="4adaf3b1e4508fa19e2d23ae3c71b1907b116df974a7dcced537bfbf743d719f.png" title=" Robot clicks on abrir calendario" width="1920"/>
-                <img src="0a339eb0170178ce551a2fc6f06b698c8257a47abafe8465b90e87f849d38251.png" title=" Robot clicks on abrir calendario (completed)" width="1920"/>
-                <img src="0a339eb0170178ce551a2fc6f06b698c8257a47abafe8465b90e87f849d38251.png" title=" Robot clicks on cambiar mes en el calendario" width="1920"/>
-                <img src="2c4ffbac6701cc353dadfa794982fd7784b1665510d947f7cdac193204b9670f.png" title=" Robot clicks on cambiar mes en el calendario (completed)" width="1920"/>
-                <img src="2c4ffbac6701cc353dadfa794982fd7784b1665510d947f7cdac193204b9670f.png" title=" Robot clicks on seleccionar fecha" width="1920"/>
-                <img src="240bbdc0d8dd3ea065ca9f629139f8036451261e1e286ec3e4557dd9f5ff6b1e.png" title=" Robot clicks on seleccionar fecha (completed)" width="1920"/>
-                <img src="240bbdc0d8dd3ea065ca9f629139f8036451261e1e286ec3e4557dd9f5ff6b1e.png" title=" Robot clicks on ver lista de horarios" width="1920"/>
-                <img src="240bbdc0d8dd3ea065ca9f629139f8036451261e1e286ec3e4557dd9f5ff6b1e.png" title=" Robot selects 9:00 a.m. - 1:00 p.m on ver lista de horarios" width="1920"/>
-                <img src="be51be158dcb448fad8719b394d3aaac5fbd210baee200d3005e4c97f3289118.png" title=" Robot selects 9:00 a.m. - 1:00 p.m on ver lista de horarios (completed)" width="1920"/>
-                <img src="be51be158dcb448fad8719b394d3aaac5fbd210baee200d3005e4c97f3289118.png" title=" Robot enters 'Prueba' into caja de texto para observaciones especiales" width="1920"/>
-                <img src="0c2e71b86bd1b61b79967705b88858890b3ccf895d106d22b0052f61429be4b4.png" title=" Robot enters 'Prueba' into caja de texto para observaciones especiales (completed)" width="1920"/>
-                <img src="0c2e71b86bd1b61b79967705b88858890b3ccf895d106d22b0052f61429be4b4.png" title=" Robot clicks on boton para realizar pedido" width="1920"/>
-                <img src="0c2e71b86bd1b61b79967705b88858890b3ccf895d106d22b0052f61429be4b4.png" title=" Robot clicks on boton de pago Nequi" width="1920"/>
-                <img src="3b9063c91ef0adb6b19626eed4ec96fe4b32f9f39e0b5eea77741f3326b2bd1f.png" title=" Robot clicks on boton de pago Nequi" width="1920"/>
-                <img src="79ec6107bb9aee29aa5b4514af9a6d355914e6114ae40e0d313a91caa462ddaf.png" title=" Robot clicks on boton de pago Nequi (completed)" width="1920"/>
-                <img src="79ec6107bb9aee29aa5b4514af9a6d355914e6114ae40e0d313a91caa462ddaf.png" title=" Robot enters '3214785965' into ingresar celular para el pago" width="1920"/>
-                <img src="f0816783f76f418854732a763b6a0f50cde5c543d07ea867f5fe658aa3474a36.png" title=" Robot enters '3214785965' into ingresar celular para el pago" width="1920"/>
-                <img src="c239614c86aaca2da5f69f8627d3861e2ca0e6d80cf6cbd0b810e9de95a89bd0.png" title=" Robot enters '3214785965' into ingresar celular para el pago (completed)" width="1920"/>
-                <img src="c239614c86aaca2da5f69f8627d3861e2ca0e6d80cf6cbd0b810e9de95a89bd0.png" title=" Robot clicks on aceptar terminos y condiciones" width="1920"/>
-                <img src="93364242a0b23fb953d2090f49db92ad0d13c4442e3691bd646c7bc0add06e3b.png" title=" Robot clicks on aceptar terminos y condiciones (completed)" width="1920"/>
-                <img src="93364242a0b23fb953d2090f49db92ad0d13c4442e3691bd646c7bc0add06e3b.png" title=" Robot clicks on boton para pagar" width="1920"/>
-                <img src="84482e66dfb1679654bf9f2aae34fa5552dac36283f7481c345459284da9d4b5.png" title=" Robot clicks on boton para pagar (completed)" width="1920"/>
-                <img src="84482e66dfb1679654bf9f2aae34fa5552dac36283f7481c345459284da9d4b5.png" title=" When agrego dos productos al carrito con diferentes cantidades '2' 'Lorena' 'Sosa' '123456' '31256874' 'yei@hotmail.com' 'Adriana Marin' 'Medell&iacute;n' 'Cra 56 - 4' 'Casa' '320456789' 'Con amor' 'YEI' '9:00 a.m. - 1:00 p.m' 'Prueba' '10' '3214785965' (completed)" width="1920"/>
-                <img src="84482e66dfb1679654bf9f2aae34fa5552dac36283f7481c345459284da9d4b5.png" title=" Then Se visualiza el resumen de la compra" width="1920"/>
-                <img src="84482e66dfb1679654bf9f2aae34fa5552dac36283f7481c345459284da9d4b5.png" title=" 1: Compra exitosa ({url=https://sanangel.com.co/#/, CantidadProducto=2, NombreCliente=Lorena, ApellidoCliente=Sosa, Documento=123456, TelefonoCliente=31256874, CorreoCliente=yei@hotmail.com, NombreDestinatario=Adriana Marin, Municipio=Medell&iacute;n, Direccion=Cra 56 - 4, InfoAdicional=Casa, TelefonoDestinatario=320456789, Mensaje=Con amor, Firma=YEI, Horario=9:00 a.m. - 1:00 p.m, Observaciones=Prueba, fecha=10, CeluPago=3214785965}) (completed)" width="1920"/>
-                <img src="d430406ddeb13375ba5edc522456ec2783d8817588c1f3903ef3edb3a22d44a8.png" title=" 2: Compra exitosa ({url=https://sanangel.com.co/#/, CantidadProducto=5, NombreCliente=Carlos, ApellidoCliente=Alfred, Documento=987654, TelefonoCliente=3117889652, CorreoCliente=car@gmail.com, NombreDestinatario=Marina Sosa, Municipio=Itag&uuml;&iacute;, Direccion=Cll 45 - 78, InfoAdicional=Apto, TelefonoDestinatario=3568795641, Mensaje=Cari&ntilde;o, Firma=CAAS, Horario=2:00 p.m. - 7:00 p.m, Observaciones=Prueba2, fecha=15, CeluPago=3247896321})" width="1920"/>
-                <img src="d430406ddeb13375ba5edc522456ec2783d8817588c1f3903ef3edb3a22d44a8.png" title=" Given Que me encuentro en la pagina de compras de san Angel 'https://sanangel.com.co/#/'" width="1920"/>
-                <img src="d430406ddeb13375ba5edc522456ec2783d8817588c1f3903ef3edb3a22d44a8.png" title=" Robot opens the browser at https://sanangel.com.co/#/" width="1920"/>
-                <img src="d430406ddeb13375ba5edc522456ec2783d8817588c1f3903ef3edb3a22d44a8.png" title=" Given Que me encuentro en la pagina de compras de san Angel 'https://sanangel.com.co/#/' (completed)" width="1920"/>
-                <img src="d430406ddeb13375ba5edc522456ec2783d8817588c1f3903ef3edb3a22d44a8.png" title=" When agrego dos productos al carrito con diferentes cantidades '5' 'Carlos' 'Alfred' '987654' '3117889652' 'car@gmail.com' 'Marina Sosa' 'Itag&uuml;&iacute;' 'Cll 45 - 78' 'Apto' '3568795641' 'Cari&ntilde;o' 'CAAS' '2:00 p.m. - 7:00 p.m' 'Prueba2' '15' '3247896321'" width="1920"/>
-                <img src="8e0cee660843dc41b43377fc80109b041c060a2366e58bed819cf19f77f9877e.png" title=" Robot clicks on boton para seleccionar producto1" width="1920"/>
+                <img src="31e4ffed593a64e251207ea5743d59ca9b8a8371ddba584852f4d0651e40a3c0.png" title=" 1: Compra exitosa ({url=https://sanangel.com.co/#/, CantidadProducto=2, NombreCliente=Lorena, ApellidoCliente=Sosa, Documento=123456, TelefonoCliente=31256874, CorreoCliente=yei@hotmail.com, NombreDestinatario=Adriana Marin, Municipio=Medell&iacute;n, Direccion=Cra 56 - 4, InfoAdicional=Casa, TelefonoDestinatario=320456789, Mensaje=Con amor, Firma=YEI, Horario=9:00 a.m. - 1:00 p.m, Observaciones=Prueba, fecha=10, CeluPago=3214785965})" width="1920"/>
+                <img src="31e4ffed593a64e251207ea5743d59ca9b8a8371ddba584852f4d0651e40a3c0.png" title=" Given Que me encuentro en la pagina de compras de san Angel 'https://sanangel.com.co/#/'" width="1920"/>
+                <img src="31e4ffed593a64e251207ea5743d59ca9b8a8371ddba584852f4d0651e40a3c0.png" title=" Robot opens the browser at https://sanangel.com.co/#/" width="1920"/>
+                <img src="31e4ffed593a64e251207ea5743d59ca9b8a8371ddba584852f4d0651e40a3c0.png" title=" Given Que me encuentro en la pagina de compras de san Angel 'https://sanangel.com.co/#/' (completed)" width="1920"/>
+                <img src="31e4ffed593a64e251207ea5743d59ca9b8a8371ddba584852f4d0651e40a3c0.png" title=" When agrego dos productos al carrito con diferentes cantidades '2' 'Lorena' 'Sosa' '123456' '31256874' 'yei@hotmail.com' 'Adriana Marin' 'Medell&iacute;n' 'Cra 56 - 4' 'Casa' '320456789' 'Con amor' 'YEI' '9:00 a.m. - 1:00 p.m' 'Prueba' '10' '3214785965'" width="1920"/>
+                <img src="d46ed06a39e61534fdf15e46b677055e2c93320772b25062d9685a5e1bd8f539.png" title=" Robot clicks on boton para seleccionar producto1" width="1920"/>
                 <img src="1b3a2faac5fd0a8ebecf1a90b853ed0cfe54c7b311330959fc9434de4f0484f8.png" title=" Robot clicks on boton para seleccionar producto1 (completed)" width="1920"/>
-                <img src="6e0411b8844d821fe8d6e0e2299887bf10ba0d66c1952c40dfe76dbe1a2257d8.png" title=" Robot clicks on boton para seleccionar el primero producto" width="1920"/>
-                <img src="7b443e740d574faaa2778ecf115e38f14420a37641eb1840755e7b37fec8a0b4.png" title=" Robot clicks on boton para seleccionar el primero producto (completed)" width="1920"/>
-                <img src="7b443e740d574faaa2778ecf115e38f14420a37641eb1840755e7b37fec8a0b4.png" title=" Robot clears field ingresar la cantidad del producto" width="1920"/>
-                <img src="61c184291008ea3bddaf5492a50642fca4080ca0ca4eee1b0a7e0eca0b198a51.png" title=" Robot clears field ingresar la cantidad del producto (completed)" width="1920"/>
-                <img src="61c184291008ea3bddaf5492a50642fca4080ca0ca4eee1b0a7e0eca0b198a51.png" title=" Robot enters '5' into ingresar la cantidad del producto" width="1920"/>
-                <img src="842dc22041648da84350387f63badca1e1ee2ec2388169b9724aebd0c68c2245.png" title=" Robot enters '5' into ingresar la cantidad del producto (completed)" width="1920"/>
-                <img src="842dc22041648da84350387f63badca1e1ee2ec2388169b9724aebd0c68c2245.png" title=" Robot clicks on boton para agregar producto al carrito" width="1920"/>
-                <img src="048ddd5b21c50d298512461b2a0c5f22013bd2a21682efd6f68b406bfb841b81.png" title=" Robot clicks on boton para agregar producto al carrito (completed)" width="1920"/>
-                <img src="578f3e18d69537d984fd07b2488ce1880713a2c881e47ad03ec09451d305c389.png" title=" Robot enters 'Carlos' into caja de texto para ingresar nombre del cliente" width="1920"/>
-                <img src="c21a5c386477d083664ba4a890d636b09b57af4ad336758317f555fbd4938a3f.png" title=" Robot enters 'Carlos' into caja de texto para ingresar nombre del cliente (completed)" width="1920"/>
-                <img src="828d1fa28f2e950aee216e96bf1f6255a337c91894f84cb3d05b4d1e115317a1.png" title=" Robot enters 'Alfred' into caja de texto para ingresar apellido del cliente" width="1920"/>
-                <img src="4951a26fa2d6a8320b0e5896da0e49b48fa45c3ab01134fbc28608c134984cbf.png" title=" Robot enters 'Alfred' into caja de texto para ingresar apellido del cliente (completed)" width="1920"/>
-                <img src="4951a26fa2d6a8320b0e5896da0e49b48fa45c3ab01134fbc28608c134984cbf.png" title=" Robot enters '987654' into caja de texto para ingresar documento del cliente" width="1920"/>
-                <img src="dbfd29045ccd74be74433ac57b549937fcd03fa603a977246eeb0c2a19f9f4ef.png" title=" Robot enters '987654' into caja de texto para ingresar documento del cliente (completed)" width="1920"/>
-                <img src="dbfd29045ccd74be74433ac57b549937fcd03fa603a977246eeb0c2a19f9f4ef.png" title=" Robot enters '3117889652' into caja de texto para ingresar telefono del cliente" width="1920"/>
-                <img src="ded7ad1813480c5ad4d2767655a64656bd5985f5cf107c70ce3961ce5b9ad75f.png" title=" Robot enters '3117889652' into caja de texto para ingresar telefono del cliente (completed)" width="1920"/>
-                <img src="ded7ad1813480c5ad4d2767655a64656bd5985f5cf107c70ce3961ce5b9ad75f.png" title=" Robot enters 'car@gmail.com' into caja de texto para ingresar correo del cliente" width="1920"/>
-                <img src="6cb5e6f882470f86af82ba5ca00c9f781911832c17d7cdd75fe3dfdaadeaa952.png" title=" Robot enters 'car@gmail.com' into caja de texto para ingresar correo del cliente (completed)" width="1920"/>
-                <img src="6cb5e6f882470f86af82ba5ca00c9f781911832c17d7cdd75fe3dfdaadeaa952.png" title=" Robot enters 'Marina Sosa' into caja de texto para ingresar nombre del destinatario" width="1920"/>
-                <img src="273a57179fc936c66336f4723fd8ea62b6b37e9103ae7b9627e1d5a3355097f6.png" title=" Robot enters 'Marina Sosa' into caja de texto para ingresar nombre del destinatario (completed)" width="1920"/>
-                <img src="273a57179fc936c66336f4723fd8ea62b6b37e9103ae7b9627e1d5a3355097f6.png" title=" Robot selects Itag&uuml;&iacute; on desplegar lista municipios" width="1920"/>
-                <img src="1370ae18dec9a96a4433585d028f672fb2d9d37ac39b1154f6c0bf1c271c779b.png" title=" Robot selects Itag&uuml;&iacute; on desplegar lista municipios (completed)" width="1920"/>
-                <img src="1370ae18dec9a96a4433585d028f672fb2d9d37ac39b1154f6c0bf1c271c779b.png" title=" Robot enters 'Cll 45 - 78' into caja de texto para ingresar direcci&oacute;n de destinatario" width="1920"/>
-                <img src="25959dc1ef822214026405b277803374b3274e3b9d20aa3ea3f92674b5a8aa3c.png" title=" Robot enters 'Cll 45 - 78' into caja de texto para ingresar direcci&oacute;n de destinatario (completed)" width="1920"/>
-                <img src="5a8ac817e0559dba434549451ae4454d4b4ed3c183cd20ddff857422fa8d54ff.png" title=" Robot enters 'Apto' into caja de texto para ingresar informacion adicional" width="1920"/>
-                <img src="3d2088f941b501aea29bae4b0a6e753523a9d200fd9a7e3350b810fd9b537886.png" title=" Robot enters 'Apto' into caja de texto para ingresar informacion adicional (completed)" width="1920"/>
-                <img src="3d2088f941b501aea29bae4b0a6e753523a9d200fd9a7e3350b810fd9b537886.png" title=" Robot enters '3568795641' into caja de texto para ingresar telefono destinatario" width="1920"/>
-                <img src="2c97b3184e9d7ae69896a854be6d7d8ff976722b5578c3fa9e669d852945c3d3.png" title=" Robot enters '3568795641' into caja de texto para ingresar telefono destinatario (completed)" width="1920"/>
-                <img src="2c97b3184e9d7ae69896a854be6d7d8ff976722b5578c3fa9e669d852945c3d3.png" title=" Robot enters 'Cari&ntilde;o' into caja de texto para ingresar mensaje a la tarjeta" width="1920"/>
-                <img src="5c0eeba48acc79cd67e4e3e5ca87007a2ba0161fea8cab18d2713dbb315fe35d.png" title=" Robot enters 'Cari&ntilde;o' into caja de texto para ingresar mensaje a la tarjeta (completed)" width="1920"/>
-                <img src="5c0eeba48acc79cd67e4e3e5ca87007a2ba0161fea8cab18d2713dbb315fe35d.png" title=" Robot enters 'CAAS' into ingresar firma" width="1920"/>
-                <img src="4b132b7c13750ccf0bedcd0875d15f30bb95174e712d71562c6dae1e141326d4.png" title=" Robot enters 'CAAS' into ingresar firma (completed)" width="1920"/>
-                <img src="4b132b7c13750ccf0bedcd0875d15f30bb95174e712d71562c6dae1e141326d4.png" title=" Robot clicks on abrir calendario" width="1920"/>
-                <img src="5b60185791b43a539718bbd06cb7668c57ece14806921f9930967f979ce78691.png" title=" Robot clicks on abrir calendario (completed)" width="1920"/>
-                <img src="740882c3262f6242be775e521a4bf1280920275dba544a6818a7fd56a9c8b0ce.png" title=" Robot clicks on cambiar mes en el calendario" width="1920"/>
-                <img src="be46e7d62914bdd00a9a2f9eb84c34052050eae927c280f6b5eca6e0ae52f119.png" title=" Robot clicks on cambiar mes en el calendario (completed)" width="1920"/>
-                <img src="be46e7d62914bdd00a9a2f9eb84c34052050eae927c280f6b5eca6e0ae52f119.png" title=" Robot clicks on seleccionar fecha" width="1920"/>
-                <img src="e38496363fadde59c09f3928d86cb9ee00a5878f3b034d6e0f1d6bdfddc7b05b.png" title=" Robot clicks on seleccionar fecha (completed)" width="1920"/>
-                <img src="e38496363fadde59c09f3928d86cb9ee00a5878f3b034d6e0f1d6bdfddc7b05b.png" title=" Robot clicks on ver lista de horarios" width="1920"/>
-                <img src="e38496363fadde59c09f3928d86cb9ee00a5878f3b034d6e0f1d6bdfddc7b05b.png" title=" Robot selects 2:00 p.m. - 7:00 p.m on ver lista de horarios" width="1920"/>
-                <img src="5e8ceba9a9ca09f280dee16f7bad03d61ad55b9269138009b216e654f9bec068.png" title=" Robot selects 2:00 p.m. - 7:00 p.m on ver lista de horarios (completed)" width="1920"/>
-                <img src="5e8ceba9a9ca09f280dee16f7bad03d61ad55b9269138009b216e654f9bec068.png" title=" Robot enters 'Prueba2' into caja de texto para observaciones especiales" width="1920"/>
-                <img src="341830395963592e076dc28dc753eca300a8eb7e3d9c549c76c0ba3ff6d4cf2f.png" title=" Robot enters 'Prueba2' into caja de texto para observaciones especiales (completed)" width="1920"/>
-                <img src="341830395963592e076dc28dc753eca300a8eb7e3d9c549c76c0ba3ff6d4cf2f.png" title=" Robot clicks on boton para realizar pedido" width="1920"/>
-                <img src="d6ac8b9bbbe637b9f7056eca80a597a5b1f401d1d94850bff888fa89d298e9fc.png" title=" Robot clicks on boton para realizar pedido (completed)" width="1920"/>
-                <img src="d6ac8b9bbbe637b9f7056eca80a597a5b1f401d1d94850bff888fa89d298e9fc.png" title=" Robot clicks on boton de pago Nequi" width="1920"/>
-                <img src="4dcbda1670e3f0d41c25d733b380488213a0462093eb11fa78ff91160af681ee.png" title=" Robot clicks on boton de pago Nequi" width="1920"/>
-                <img src="4d746ce207394261a1f11769ff347cc7b735e0a293e62b3046662af56e502ae1.png" title=" Robot clicks on boton de pago Nequi (completed)" width="1920"/>
-                <img src="4d746ce207394261a1f11769ff347cc7b735e0a293e62b3046662af56e502ae1.png" title=" Robot enters '3247896321' into ingresar celular para el pago" width="1920"/>
-                <img src="19d457058e8947ab6e78a7f49fd47e13db00653bb07cc13b7e9ff16448a9e4a7.png" title=" Robot enters '3247896321' into ingresar celular para el pago (completed)" width="1920"/>
-                <img src="19d457058e8947ab6e78a7f49fd47e13db00653bb07cc13b7e9ff16448a9e4a7.png" title=" Robot clicks on aceptar terminos y condiciones" width="1920"/>
-                <img src="3923ec6b97d539c066eaf77a6fd9d8bf3d2b2004f60acc1648730a6d5b813e25.png" title=" Robot clicks on aceptar terminos y condiciones (completed)" width="1920"/>
-                <img src="3923ec6b97d539c066eaf77a6fd9d8bf3d2b2004f60acc1648730a6d5b813e25.png" title=" Robot clicks on boton para pagar" width="1920"/>
-                <img src="2090d9ae0d6572b013e9a35c161d1887cf80705063f5d9df020272b64e9feb98.png" title=" Robot clicks on boton para pagar" width="1920"/>
-                <img src="a364d28097286394e91c96d7bcc2c4834b5521294090ae0e3861d2d8170981e3.png" title=" Robot clicks on boton para pagar (completed)" width="1920"/>
-                <img src="a364d28097286394e91c96d7bcc2c4834b5521294090ae0e3861d2d8170981e3.png" title=" When agrego dos productos al carrito con diferentes cantidades '5' 'Carlos' 'Alfred' '987654' '3117889652' 'car@gmail.com' 'Marina Sosa' 'Itag&uuml;&iacute;' 'Cll 45 - 78' 'Apto' '3568795641' 'Cari&ntilde;o' 'CAAS' '2:00 p.m. - 7:00 p.m' 'Prueba2' '15' '3247896321' (completed)" width="1920"/>
-                <img src="a364d28097286394e91c96d7bcc2c4834b5521294090ae0e3861d2d8170981e3.png" title=" Then Se visualiza el resumen de la compra" width="1920"/>
-                <img src="df7b8f34fd28310f5916cc8b7913f38356611612a061fd9be5c0b23303cb9464.png" title=" Then Se visualiza el resumen de la compra (completed)" width="1920"/>
-                <img src="df7b8f34fd28310f5916cc8b7913f38356611612a061fd9be5c0b23303cb9464.png" title=" 2: Compra exitosa ({url=https://sanangel.com.co/#/, CantidadProducto=5, NombreCliente=Carlos, ApellidoCliente=Alfred, Documento=987654, TelefonoCliente=3117889652, CorreoCliente=car@gmail.com, NombreDestinatario=Marina Sosa, Municipio=Itag&uuml;&iacute;, Direccion=Cll 45 - 78, InfoAdicional=Apto, TelefonoDestinatario=3568795641, Mensaje=Cari&ntilde;o, Firma=CAAS, Horario=2:00 p.m. - 7:00 p.m, Observaciones=Prueba2, fecha=15, CeluPago=3247896321}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+                <img src="1b3a2faac5fd0a8ebecf1a90b853ed0cfe54c7b311330959fc9434de4f0484f8.png" title=" Robot clicks on boton para seleccionar el primero producto" width="1920"/>
+                <img src="b253901284769f5a033737d054668a82441a09f735833d066018f17ef8b733aa.png" title=" Robot clicks on boton para seleccionar el primero producto (completed)" width="1920"/>
+                <img src="74daddc906a953288d7dd34374a0a08c7b0772a7056fe7c8f29c0a1882c47bae.png" title=" Robot clears field ingresar la cantidad del producto" width="1920"/>
+                <img src="4c62044580d3eac0177b8ab642bb455ffc752cb366222ce640b869f2fe1ed552.png" title=" Robot clears field ingresar la cantidad del producto (completed)" width="1920"/>
+                <img src="4c62044580d3eac0177b8ab642bb455ffc752cb366222ce640b869f2fe1ed552.png" title=" Robot enters '2' into ingresar la cantidad del producto" width="1920"/>
+                <img src="bffe28bf34657b5091cdbbbb7cec724aa550f03b6fb4c30168d585a068285ab7.png" title=" Robot enters '2' into ingresar la cantidad del producto (completed)" width="1920"/>
+                <img src="bffe28bf34657b5091cdbbbb7cec724aa550f03b6fb4c30168d585a068285ab7.png" title=" Robot clicks on boton para agregar producto al carrito" width="1920"/>
+                <img src="ec618f86e424c76c3c346b3f5dfa8ec3924de3045d464ccfad0132d79f38f4a4.png" title=" Robot clicks on boton para agregar producto al carrito (completed)" width="1920"/>
+                <img src="ec618f86e424c76c3c346b3f5dfa8ec3924de3045d464ccfad0132d79f38f4a4.png" title=" Robot enters 'Lorena' into caja de texto para ingresar nombre del cliente" width="1920"/>
+                <img src="637fbe14ba9735bf08f406a9ebd53a8c95b594c43205bc58f4551a663bac5ee4.png" title=" Robot enters 'Lorena' into caja de texto para ingresar nombre del cliente (completed)" width="1920"/>
+                <img src="637fbe14ba9735bf08f406a9ebd53a8c95b594c43205bc58f4551a663bac5ee4.png" title=" Robot enters 'Sosa' into caja de texto para ingresar apellido del cliente" width="1920"/>
+                <img src="880b672200dd5183844734a898e468d53b4e1ea0b2d437003e36afbfe7115649.png" title=" Robot enters 'Sosa' into caja de texto para ingresar apellido del cliente (completed)" width="1920"/>
+                <img src="880b672200dd5183844734a898e468d53b4e1ea0b2d437003e36afbfe7115649.png" title=" Robot enters '123456' into caja de texto para ingresar documento del cliente" width="1920"/>
+                <img src="6b16477fcd357d2d4d017de0c66f538e7d9c9a8f14d24a24b1213764b771804a.png" title=" Robot enters '123456' into caja de texto para ingresar documento del cliente (completed)" width="1920"/>
+                <img src="6b16477fcd357d2d4d017de0c66f538e7d9c9a8f14d24a24b1213764b771804a.png" title=" Robot enters '31256874' into caja de texto para ingresar telefono del cliente" width="1920"/>
+                <img src="f1fd574385b9c1ae710ddca9bafa7aa25daa3667bf2654401580b6cf2d4dcd62.png" title=" Robot enters '31256874' into caja de texto para ingresar telefono del cliente (completed)" width="1920"/>
+                <img src="f1fd574385b9c1ae710ddca9bafa7aa25daa3667bf2654401580b6cf2d4dcd62.png" title=" Robot enters 'yei@hotmail.com' into caja de texto para ingresar correo del cliente" width="1920"/>
+                <img src="97b5d86c52b5befc006b2f48c1b7dd2ca40ec5c5b2bac3edea22f9182a874f18.png" title=" Robot enters 'yei@hotmail.com' into caja de texto para ingresar correo del cliente (completed)" width="1920"/>
+                <img src="97b5d86c52b5befc006b2f48c1b7dd2ca40ec5c5b2bac3edea22f9182a874f18.png" title=" Robot enters 'Adriana Marin' into caja de texto para ingresar nombre del destinatario" width="1920"/>
+                <img src="aa80fe8d3a2b3ccff036f8f13e8959439d9d09d5ebd093a193014815d761f204.png" title=" Robot enters 'Adriana Marin' into caja de texto para ingresar nombre del destinatario (completed)" width="1920"/>
+                <img src="aa80fe8d3a2b3ccff036f8f13e8959439d9d09d5ebd093a193014815d761f204.png" title=" Robot selects Medell&iacute;n on desplegar lista municipios" width="1920"/>
+                <img src="dd5089664b332a0828ef164ef8fe18ae3b864e9debaa868b850bf7b108f85957.png" title=" Robot selects Medell&iacute;n on desplegar lista municipios (completed)" width="1920"/>
+                <img src="dd5089664b332a0828ef164ef8fe18ae3b864e9debaa868b850bf7b108f85957.png" title=" Robot enters 'Cra 56 - 4' into caja de texto para ingresar direcci&oacute;n de destinatario" width="1920"/>
+                <img src="266707cd5f17efde6d991a66d4a6ad96b720dfe8e192fca407c15d21a6771141.png" title=" Robot enters 'Cra 56 - 4' into caja de texto para ingresar direcci&oacute;n de destinatario (completed)" width="1920"/>
+                <img src="266707cd5f17efde6d991a66d4a6ad96b720dfe8e192fca407c15d21a6771141.png" title=" Robot enters 'Casa' into caja de texto para ingresar informacion adicional" width="1920"/>
+                <img src="a20f5fe0e761cb4fbeb0c5bd10a6d515517ac3be019627aaecb441b67030d3ac.png" title=" Robot enters 'Casa' into caja de texto para ingresar informacion adicional (completed)" width="1920"/>
+                <img src="a20f5fe0e761cb4fbeb0c5bd10a6d515517ac3be019627aaecb441b67030d3ac.png" title=" Robot enters '320456789' into caja de texto para ingresar telefono destinatario" width="1920"/>
+                <img src="b38b116a2a3b75a57d35ded7bbfdbc28b0202a6463ad57c3af5a71edcd168b68.png" title=" Robot enters '320456789' into caja de texto para ingresar telefono destinatario (completed)" width="1920"/>
+                <img src="b38b116a2a3b75a57d35ded7bbfdbc28b0202a6463ad57c3af5a71edcd168b68.png" title=" Robot enters 'Con amor' into caja de texto para ingresar mensaje a la tarjeta" width="1920"/>
+                <img src="bfcca7f9c59a02b4df220edf44a0eea4374fb540fddea6ace9479bef9297a662.png" title=" Robot enters 'Con amor' into caja de texto para ingresar mensaje a la tarjeta (completed)" width="1920"/>
+                <img src="bfcca7f9c59a02b4df220edf44a0eea4374fb540fddea6ace9479bef9297a662.png" title=" Robot enters 'YEI' into ingresar firma" width="1920"/>
+                <img src="253ba61f3357d76f6b3aec359e77dbfa977c17590d0f65d940132c2071f36b3d.png" title=" Robot enters 'YEI' into ingresar firma (completed)" width="1920"/>
+                <img src="253ba61f3357d76f6b3aec359e77dbfa977c17590d0f65d940132c2071f36b3d.png" title=" Robot clicks on abrir calendario" width="1920"/>
+                <img src="e8639559e12b5dc76c2d9cc9757121a59ddca5b097d98f20b06e04260afa923e.png" title=" Robot clicks on abrir calendario (completed)" width="1920"/>
+                <img src="e8639559e12b5dc76c2d9cc9757121a59ddca5b097d98f20b06e04260afa923e.png" title=" Robot clicks on cambiar mes en el calendario" width="1920"/>
+                <img src="3fa2d0d4e09c143c14e0db7c94743803dce6a1423109957dacb13b94cd3a2750.png" title=" Robot clicks on cambiar mes en el calendario (completed)" width="1920"/>
+                <img src="3fa2d0d4e09c143c14e0db7c94743803dce6a1423109957dacb13b94cd3a2750.png" title=" Robot clicks on seleccionar fecha" width="1920"/>
+                <img src="7786fe98c513921217aa70e21aa746fc69f60986a667a6f711e5e8396346f003.png" title=" Robot clicks on seleccionar fecha (completed)" width="1920"/>
+                <img src="7786fe98c513921217aa70e21aa746fc69f60986a667a6f711e5e8396346f003.png" title=" Robot clicks on ver lista de horarios" width="1920"/>
+                <img src="7786fe98c513921217aa70e21aa746fc69f60986a667a6f711e5e8396346f003.png" title=" Robot selects 9:00 a.m. - 1:00 p.m on ver lista de horarios" width="1920"/>
+                <img src="de75190db3bf0844a78c0b3a5feb0897e3590d5fd1ca12c063ee6e388289ecb3.png" title=" Robot selects 9:00 a.m. - 1:00 p.m on ver lista de horarios (completed)" width="1920"/>
+                <img src="de75190db3bf0844a78c0b3a5feb0897e3590d5fd1ca12c063ee6e388289ecb3.png" title=" Robot enters 'Prueba' into caja de texto para observaciones especiales" width="1920"/>
+                <img src="c814a9b8d8e15fc498b16a8f6afcf677b7a159501fdd0240073e62d45b98a88b.png" title=" Robot enters 'Prueba' into caja de texto para observaciones especiales (completed)" width="1920"/>
+                <img src="c814a9b8d8e15fc498b16a8f6afcf677b7a159501fdd0240073e62d45b98a88b.png" title=" Robot clicks on boton para realizar pedido" width="1920"/>
+                <img src="71456b42714ec1ae968fe6c37377cf75dc08dddcaf2f41c7055bdaee35b60641.png" title=" Robot clicks on boton para realizar pedido (completed)" width="1920"/>
+                <img src="71456b42714ec1ae968fe6c37377cf75dc08dddcaf2f41c7055bdaee35b60641.png" title=" Robot clicks on boton de pago Nequi" width="1920"/>
+                <img src="6b90276e5e38a7bbfa19bfc28af9caf463fdfd0806b0c6baa2fed28cfc3c8ffc.png" title=" Robot clicks on boton de pago Nequi" width="1920"/>
+                <img src="0f0f34a8e2169b16477df932695ae1f4e72b0c0ded2edd4c6481a9ad89a567a4.png" title=" Robot clicks on boton de pago Nequi (completed)" width="1920"/>
+                <img src="0f0f34a8e2169b16477df932695ae1f4e72b0c0ded2edd4c6481a9ad89a567a4.png" title=" Robot enters '3214785965' into ingresar celular para el pago" width="1920"/>
+                <img src="8a124519ab7c3214ed833aa763ce3cdaa3a817c2104c1c85b803de548455b870.png" title=" Robot enters '3214785965' into ingresar celular para el pago" width="1920"/>
+                <img src="002ee57a550cfd96a34db6e912d981d2bc4c3dec052d7d3cfeeedc051d16b478.png" title=" Robot enters '3214785965' into ingresar celular para el pago (completed)" width="1920"/>
+                <img src="002ee57a550cfd96a34db6e912d981d2bc4c3dec052d7d3cfeeedc051d16b478.png" title=" Robot clicks on aceptar terminos y condiciones" width="1920"/>
+                <img src="866b58f2ce7440f1f07707e2c147ac52698d55ecd87feed964a8973586211a12.png" title=" Robot clicks on aceptar terminos y condiciones (completed)" width="1920"/>
+                <img src="866b58f2ce7440f1f07707e2c147ac52698d55ecd87feed964a8973586211a12.png" title=" Robot clicks on boton para pagar" width="1920"/>
+                <img src="eb12d480faba3a65a986395af376a62069efa96c782b7770bf73db98280cdb49.png" title=" Robot clicks on boton para pagar (completed)" width="1920"/>
+                <img src="eb12d480faba3a65a986395af376a62069efa96c782b7770bf73db98280cdb49.png" title=" When agrego dos productos al carrito con diferentes cantidades '2' 'Lorena' 'Sosa' '123456' '31256874' 'yei@hotmail.com' 'Adriana Marin' 'Medell&iacute;n' 'Cra 56 - 4' 'Casa' '320456789' 'Con amor' 'YEI' '9:00 a.m. - 1:00 p.m' 'Prueba' '10' '3214785965' (completed)" width="1920"/>
+                <img src="eb12d480faba3a65a986395af376a62069efa96c782b7770bf73db98280cdb49.png" title=" Then Se visualiza el resumen de la compra" width="1920"/>
+                <img src="eb12d480faba3a65a986395af376a62069efa96c782b7770bf73db98280cdb49.png" title=" 1: Compra exitosa ({url=https://sanangel.com.co/#/, CantidadProducto=2, NombreCliente=Lorena, ApellidoCliente=Sosa, Documento=123456, TelefonoCliente=31256874, CorreoCliente=yei@hotmail.com, NombreDestinatario=Adriana Marin, Municipio=Medell&iacute;n, Direccion=Cra 56 - 4, InfoAdicional=Casa, TelefonoDestinatario=320456789, Mensaje=Con amor, Firma=YEI, Horario=9:00 a.m. - 1:00 p.m, Observaciones=Prueba, fecha=10, CeluPago=3214785965}) (completed): <span class='error-color'>ERROR</span>" width="1920"/>
             </div>
         </div>
 
