@@ -12,7 +12,6 @@ import java.nio.file.Paths;
 
 import static co.compensar.userinterfaces.CargarInventario.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class CargarinventarioTask implements Task {
@@ -29,10 +28,8 @@ public class CargarinventarioTask implements Task {
                 Scroll.to(LST_INVENTARIOS),
                 Click.on(LST_INVENTARIOS),
                 Click.on(BTN_INVENTARIO),
-                Enter.theValue(buscar).into(TXT_BUSCAR),
-                WaitUntil.the(CHK_SELECCIONA_NOMBRE, isVisible()).forNoMoreThan(10).seconds(),
-                WaitUntil.the(CHK_SELECCIONA_NOMBRE, isClickable()).forNoMoreThan(10).seconds(),
-                JavaScriptClick.on(CHK_SELECCIONA_NOMBRE)
+                Enter.theValue(buscar).into(TXT_BUSCAR)
+
         );
 
         try {
@@ -40,9 +37,17 @@ public class CargarinventarioTask implements Task {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+        actor.attemptsTo(
+                JavaScriptClick.on(CHK_SELECCIONA_NOMBRE)
 
-        String cantidadInventario = actor.asksFor(Text.of(TXT_CANT)).toString();
-        System.out.println("La cantidad inicial en el inventario es: " + cantidadInventario);
+        );
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        String cantidadInv = actor.asksFor(Text.of(TXT_CANTIDAD)).toString();
+        System.out.println("La cantidad inicial en el inventario es: " + cantidadInv);
 
         actor.attemptsTo(
                 Scroll.to(BTN_SUBIR_ARCHIVO),
@@ -51,7 +56,7 @@ public class CargarinventarioTask implements Task {
 
 
         actor.attemptsTo(
-                WaitUntil.the(LBL_VALIDA_CARGA, isVisible()).forNoMoreThan(250).seconds(),
+                WaitUntil.the(LBL_VALIDA_CARGA, isVisible()).forNoMoreThan(30).seconds(),
                 Ensure.that(LBL_VALIDA_CARGA).isDisplayed(),
                 Click.on(BTN_TERMINAR)
         );
@@ -63,8 +68,8 @@ public class CargarinventarioTask implements Task {
                 Enter.theValue(buscar).into(TXT_BUSCAR)
         );
 
-        String cantidadInv = actor.asksFor(Text.of(TXT_CANT)).toString();
-        System.out.println("La cantidad nueva en el inventario es: " + cantidadInv);
+        String cantInv = actor.asksFor(Text.of(TXT_CANT)).toString();
+        System.out.println("La cantidad nueva en el inventario es: " + cantInv);
 
         actor.attemptsTo(
                 WaitUntil.the(IMG_AVATAR, isVisible()).forNoMoreThan(15).seconds(),

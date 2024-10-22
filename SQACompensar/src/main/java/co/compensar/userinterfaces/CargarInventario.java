@@ -29,6 +29,9 @@ public class CargarInventario {
     public static final Target BTN_TERMINAR = Target.the("Clic en botón Terminar")
             .located(By.xpath("//span[contains(text(),'Terminar')]"));
 
+    public static final Target TXT_CANTIDAD = Target.the("Muestra la nueva inicial en el inventario")
+            .located(By.xpath("(//input[@type='radio']/ancestor::tr//span[contains(@class,'cellEdit')])[1]"));
+
     public static final Target TXT_CANT = Target.the("Muestra la nueva cantidad en el inventario")
             .located(By.xpath("//input[@type='radio' and @checked]/ancestor::tr//span[contains(@class,'cellEdit')]"));
 

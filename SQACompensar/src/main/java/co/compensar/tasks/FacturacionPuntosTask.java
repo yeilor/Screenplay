@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.actions.Clear;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Scroll;
+import net.serenitybdd.screenplay.conditions.Check;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.waits.WaitUntil;
@@ -29,8 +30,12 @@ public class FacturacionPuntosTask implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                //WaitUntil.the(BTN_CERRAR_NOTIFICACIONES, isVisible()).forNoMoreThan(40).seconds(),
-                //Click.on(BTN_CERRAR_NOTIFICACIONES),
+                Check.whether(
+                                BTN_CERRAR_NOTIFICACIONES.resolveFor(actor).isVisible())
+                        .andIfSo(
+                                Click.on(BTN_CERRAR_NOTIFICACIONES)
+                        ),
+
                 Click.on(TXT_BUSQUEDA),
                 WaitUntil.the(TXT_BUSQUEDA, isVisible()).forNoMoreThan(30).seconds(),
                 Enter.theValue(nombreExperiencia).into(TXT_BUSQUEDA),
@@ -66,6 +71,14 @@ public class FacturacionPuntosTask implements Task {
             throw new RuntimeException(e);
         }
 
+        actor.attemptsTo(
+                Check.whether(
+                                BTN_CERRAR_NOTIFICACIONES.resolveFor(actor).isVisible())
+                        .andIfSo(
+                                Click.on(BTN_CERRAR_NOTIFICACIONES)
+                        )
+        );
+
         String cantidadPuntos = actor.asksFor(Text.of(LBL_PUNTOS)).toString();
         System.out.println("La cantidad final de puntos es: " + cantidadPuntos);
 
@@ -73,6 +86,8 @@ public class FacturacionPuntosTask implements Task {
                 Click.on(IMG_PERFIL),
                 Click.on(BTN_CERRAR_SESION)
         );
+
+
     }
 
     public static FacturacionPuntosTask conDatos(String nombreExperiencia, String cantidad) {

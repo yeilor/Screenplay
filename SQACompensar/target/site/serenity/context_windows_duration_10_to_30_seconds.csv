@@ -1,3 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Login Administrador","Login de usuario administrador exitoso","SUCCESS","2024-10-16T09:23:39.6263142-05:00[America/Bogota]","0.0","21.75"
-"Login usuario","Login de usuario exitoso","SUCCESS","2024-10-18T10:30:00.8830591-05:00[America/Bogota]","0.0","24.28"
+"Compra de una Experiencia","Compra de experiencia por puntos exitosa","FAILURE","2024-10-29T11:35:20.7578209-05:00[America/Bogota]","0.0","104.15"

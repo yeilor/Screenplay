@@ -30,7 +30,12 @@ public class LoginUsuarioAdminTask implements Task {
                 Enter.theValue(usuario).into(TXT_USUARIO),
                 Enter.theValue(clave).into(TXT_CLAVE),
                 Scroll.to(BTN_INGRESAR_CUENTA),
-                Click.on(BTN_INGRESAR_CUENTA),
+                Click.on(BTN_INGRESAR_CUENTA)
+        );
+
+        //JOptionPane.showMessageDialog(null, "Espera");
+
+        actor.attemptsTo(
                 Ensure.that(LBL_VALIDA_ADMIN_PLATAFORMA).isDisplayed()
         );
 

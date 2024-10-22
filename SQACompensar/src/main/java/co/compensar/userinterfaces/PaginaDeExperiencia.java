@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 public class PaginaDeExperiencia {
 
     public static final Target BTN_CERRAR_NOTIFICACIONES = Target.the("Botón para cerrar notificaciones")
-            .located(By.xpath("//button[@class='button primary']"));
+            .located(By.xpath("//button[@class='button primary' and text()='Cerrar todas']"));
 
     public static final Target TXT_BUSQUEDA = Target.the("Campo de texto para búsqueda")
             .located(By.xpath("//input[@class='ant-input search-bar-header']"));

@@ -14,6 +14,6 @@ Característica: Compra de una Experiencia
     Ejemplos:
       | url                                            | usuario    | clave    | nombreExperiencia                                                     | tipoDocumento        | cantidad |
 ##@externaldata@Data/DatosCompensar.xlsx@Experiencia
-   |https://www.preaws.compensar.co/auth/pre-login   |53021207   |Ab123456   |Crea accesorios y prendas únicas con la técnica del tejido en crochet   |Cédula de Ciudadanía   |1|
-   |https://www.preaws.compensar.co/auth/pre-login   |1000005222   |Ab123456   |Curso virtual de pintura en acuarela   |Cédula de Ciudadanía   |2|
+   |https://www.preaws.compensar.co/auth/pre-login   |1000005222   |Ab123456   |Crea accesorios y prendas únicas con la técnica del tejido en crochet   |Cédula de Ciudadanía   |3|
+   |https://www.preaws.compensar.co/auth/pre-login   |53021207   |Ab123456   |Curso virtual de pintura en acuarela   |Cédula de Ciudadanía   |2|
 

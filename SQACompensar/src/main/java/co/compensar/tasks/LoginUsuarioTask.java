@@ -6,8 +6,6 @@ import net.serenitybdd.screenplay.actions.*;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.questions.Text;
 
-import javax.swing.*;
-
 import static co.compensar.userinterfaces.LoginUsuario.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
@@ -33,13 +31,14 @@ public class LoginUsuarioTask implements Task {
                 Click.on(BTN_INGRESAR_CUENTA)
 
         );
-        JOptionPane.showMessageDialog(null, "Espera");
-        String cantidadPuntos = actor.asksFor(Text.of(LBL_PUNTOS)).toString();
-        System.out.println("La cantidad inicial de puntos es: " + cantidadPuntos);
+        //JOptionPane.showMessageDialog(null, "Espera");
 
         actor.attemptsTo(
                 Ensure.that(TXT_VALIDAR).isDisplayed()
         );
+
+        String cantidadPuntos = actor.asksFor(Text.of(LBL_PUNTOS)).toString();
+        System.out.println("La cantidad inicial de puntos es: " + cantidadPuntos);
     }
 
     public static LoginUsuarioTask conDatos(String tipoDocumento, String usuario, String clave) {
